@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Research Domain: Literature Survey, Research Gap, Problem Statement, Objectives, Methodology, and Technologies for TrailLink Mobile Mesh Platform.">
+  <title>Domain | TrailLink Academic Research Portal</title>
+  <link rel="stylesheet" href="css/style.css?v=3.3">
+  <link rel="icon" type="image/png" href="images/traillink_logo.png">
+  <script>
+    (function() {
+      function clean() {
+        document.querySelectorAll("nav a, footer a").forEach(function(a) {
+          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
+            var li = a.closest("li");
+            if (li) li.remove(); else a.remove();
+          }
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", clean);
+      } else {
+        clean();
+      }
+      window.addEventListener("pageshow", clean);
+    })();
+  </script>
+</head>
+<body>
+
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html?v=3.2" class="brand-wrapper">
+        <img src="images/traillink_logo.png" alt="TrailLink Logo" class="brand-logo">
+        <div class="brand-text">
+          <h2>TrailLink</h2>
+          <span>Research Portal &bull; CDAP</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html?v=3.2" class="nav-link">Home</a></li>
+          <li><a href="domain.html?v=3.2" class="nav-link active">Domain</a></li>
+          <li><a href="milestones.html?v=3.2" class="nav-link">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
+          <li><a href="about.html?v=3.2" class="nav-link">About Us</a></li>
+          <li><a href="contact.html?v=3.2" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="page-banner-container">
+      <div class="breadcrumbs">
+        <a href="index.html?v=3.2">Home</a> &gt; <span>Domain</span>
+      </div>
+      <h1>Research Domain &amp; Theoretical Foundations</h1>
+      <p>
+        Systematic exploration of literature, identified research gaps, formal problem statement, research objectives, Design Science Research Methodology (DSRM), and technology stack.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-container">
+
+      <!-- Fast Access Banner for Evaluators -->
+      <div class="quick-access-banner reveal">
+        <div class="quick-access-banner-content">
+          <h4><span>&#9889;</span> Academic Research Paper &bull; Published Findings</h4>
+          <p>"Offline-First Location Sharing, Mapping, and Priority-Based Bounded SOS Routing in Hybrid Mobile Ad-Hoc Networks: The TrailLink Platform"</p>
+        </div>
+        <div class="quick-access-pills">
+          <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="quick-pill-btn primary">
+            &#128196; Read Research Paper (PDF) &nearr;
+          </a>
+          <a href="presentations.html?v=3.2" class="quick-pill-btn">
+            &#128202; Presentation Slides (.pptx) &nearr;
+          </a>
+          <a href="docs/SLIIT_INDIVIDUAL_THESIS_NETHULA_DULSARA.docx" class="quick-pill-btn" download>
+            &#128196; Individual Thesis (.docx)
+          </a>
+        </div>
+      </div>
+
+      <!-- In-Page Quick Navigation Anchors -->
+      <nav class="domain-nav-anchors" aria-label="Quick jump section anchors">
+        <span style="font-size: 0.88rem; font-weight: 700; align-self: center; margin-right: 0.5rem;">Jump To:</span>
+        <a href="#lit-survey" class="domain-anchor-btn">1. Literature Survey</a>
+        <a href="#research-gap" class="domain-anchor-btn">2. Research Gap</a>
+        <a href="#problem-statement" class="domain-anchor-btn">3. Research Problem</a>
+        <a href="#objectives" class="domain-anchor-btn">4. Objectives</a>
+        <a href="#methodology" class="domain-anchor-btn">5. Methodology</a>
+        <a href="#technologies" class="domain-anchor-btn">6. Technologies Used</a>
+        <a href="#subsystem-features" class="domain-anchor-btn" style="background: #ecfdf5; color: var(--primary); border-color: var(--primary-border);">7. 4 Subsystems &amp; All Features</a>
+      </nav>
+
+      <!-- 1. Literature Survey -->
+      <section id="lit-survey" class="academic-card reveal">
+        <h2><span class="card-num-badge">01</span> Literature Survey &amp; Theoretical Foundations</h2>
+        <p>
+          Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) framework, our literature survey synthesizes studies published between 2014 and 2026 across IEEE Xplore, ACM Digital Library, ScienceDirect, and USENIX. The theoretical basis addresses three foundational domains:
+        </p>
+
+        <h4 style="margin: 1.25rem 0 0.5rem; color: var(--secondary);">A. MANET vs. Delay-Tolerant Networking (DTN)</h4>
+        <p>
+          Classical Mobile Ad-Hoc Network (MANET) protocols such as AODV and OLSR assume continuous contemporaneous end-to-end routing paths. When node mobility or physical terrain breaks connections, MANETs suffer severe route discovery packet storms. In contrast, Delay-Tolerant Networks (DTNs) employ the <em>Store-Carry-and-Forward</em> paradigm, where intermediate nodes cache data locally and forward packets upon opportunistic encounters. TrailLink functions as a hybrid MANET-DTN architecture: expediting sub-second emergency distress alerts across proximate active clusters while buffering spatial fixes and text chats for delay-tolerant dissemination.
+        </p>
+
+        <h4 style="margin: 1.25rem 0 0.5rem; color: var(--secondary);">B. Cross-Layer Radio Orchestration (BLE &amp; Wi-Fi Direct)</h4>
+        <p>
+          Smartphones lack physical layer-3 ad-hoc routing hardware. Pure Bluetooth Low Energy (BLE) offers exceptional low power (10&ndash;25 mA) but severely restricted payload bandwidth (&lt;10 kbps multi-hop). Conversely, Wi-Fi Direct provides high bandwidth (&gt;54 Mbps) but high energy overhead. TrailLink employs Google Nearby Connections (<code>P2P_CLUSTER</code>), utilizing BLE for background neighbor discovery and dynamically promoting connections to high-speed Wi-Fi Direct TCP/IP sockets.
+        </p>
+
+        <!-- Conceptual Framework Figure 2.1 -->
+        <div class="figure-showcase" style="margin-top: 2rem;">
+          <div class="figure-header">
+            <h3>Figure 2.1: Conceptual Framework for TrailLink</h3>
+            <span class="notice-badge">Theoretical Model</span>
+          </div>
+          <div class="figure-img-container">
+            <img src="images/figure_2_1_conceptual_framework.png" alt="TrailLink Conceptual Framework" loading="lazy">
+          </div>
+          <div class="figure-caption">
+            <strong>Theoretical Integration:</strong> Bridging unprivileged Android hardware abstractions, local-first ACID persistence, dynamic temporal freshness decay &fnof;(t), and out-of-order priority emergency scheduling.
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Research Gap -->
+      <section id="research-gap" class="academic-card reveal">
+        <h2><span class="card-num-badge">02</span> Identified Research Gap</h2>
+        <p>
+          Prior approaches to wilderness communications force users to choose between expensive dedicated satellite hardware ($350&ndash;$600 plus monthly subscriptions) or academic research prototypes that require Linux kernel modifications and Android root privileges.
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>System / Paradigm</th>
+                <th>Stock Handset</th>
+                <th>Zero Extra Hardware</th>
+                <th>Offline Vector Map</th>
+                <th>Prioritized SOS</th>
+                <th>Automated Cloud Bridge</th>
+                <th>Broadcast Storm Protection</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Garmin inReach</strong></td>
+                <td>No</td>
+                <td>No</td>
+                <td>Limited</td>
+                <td>Yes</td>
+                <td>Proprietary</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td><strong>goTenna Pro</strong></td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>Partial</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td><strong>Serval Mesh</strong></td>
+                <td>No (Requires Root)</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Partial</td>
+              </tr>
+              <tr>
+                <td><strong>Briar Project</strong></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td><strong>Bridgefy SDK</strong></td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr style="background-color: #ecfdf5; font-weight: bold;">
+                <td style="color: var(--primary);"><strong>TrailLink (This Research)</strong></td>
+                <td><strong>Yes</strong></td>
+                <td><strong>Yes</strong></td>
+                <td><strong>Yes</strong></td>
+                <td><strong>Yes</strong></td>
+                <td><strong>Yes</strong></td>
+                <td><strong>Yes</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 1rem;">
+          <strong>The Fundamental Gap:</strong> No existing platform integrates offline vector map rendering, spatio-temporal freshness decay, out-of-order emergency SOS priority scheduling, and transactional cloud database reconciliation within an unprivileged user-space mobile application.
+        </p>
+      </section>
+
+      <!-- 3. Research Problem Statement -->
+      <section id="problem-statement" class="academic-card reveal">
+        <h2><span class="card-num-badge">03</span> Research Problem Statement</h2>
+        <p>
+          Contemporary outdoor team safety suffers from a deep architectural divide: mobile operating systems enforce aggressive sandboxes that restrict raw network access, while consumer safety software assumes continuous cloud connectivity.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="background: var(--bg-card-alt); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent-rose);">
+            <h4 style="margin-bottom: 0.5rem; color: var(--secondary);">1. OS Privilege Boundaries</h4>
+            <p style="font-size: 0.88rem; margin: 0;">Stock Android blocks raw Layer-3 packet injection. Academic routing protocols requiring kernel patches or root access void warranties and block public adoption.</p>
+          </div>
+          <div style="background: var(--bg-card-alt); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--accent-amber);">
+            <h4 style="margin-bottom: 0.5rem; color: var(--secondary);">2. Bandwidth &amp; Contention</h4>
+            <p style="font-size: 0.88rem; margin: 0;">In 2.4GHz unlicensed spectrum, bulky audio or chat streams delay life-critical SOS packets under standard FIFO queuing, risking catastrophic broadcast storms.</p>
+          </div>
+          <div style="background: var(--bg-card-alt); padding: 1.25rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+            <h4 style="margin-bottom: 0.5rem; color: var(--secondary);">3. Dual-State Inconsistency</h4>
+            <p style="font-size: 0.88rem; margin: 0;">Disconnected nodes accumulate critical coordinates. Naive cloud syncing causes duplicates and race conditions, while OS process kills cause data loss.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Research Objectives -->
+      <section id="objectives" class="academic-card reveal">
+        <h2><span class="card-num-badge">04</span> Research Aim &amp; Specific Objectives</h2>
+        <p>
+          <strong>Primary Aim:</strong> To design, implement, and empirically validate an infrastructure-independent, unprivileged user-space location-sharing and emergency-coordination subsystem for consumer Android smartphones.
+        </p>
+        <ul style="list-style: none; padding-left: 0; margin-top: 1.25rem;">
+          <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+            <span style="background: var(--primary-light); color: var(--primary); font-weight: bold; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.85rem; height: fit-content;">Obj 1</span>
+            <div><strong>Unprivileged User-Space Transport:</strong> Construct an ad-hoc peer transport using Google Nearby Connections (BLE discovery promoted to Wi-Fi Direct sockets) packaging GNSS fixes into compact 240-byte JSON envelopes under 512-byte MTU constraints.</div>
+          </li>
+          <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+            <span style="background: var(--primary-light); color: var(--primary); font-weight: bold; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.85rem; height: fit-content;">Obj 2</span>
+            <div><strong>Offline Geospatial Engine with Dynamic Freshness:</strong> Implement on-device vector/raster rendering using offline MBTiles archives coupled with a mathematical temporal decay function &fnof;<sub>freshness</sub>(&Delta;t) to color-code coordinate currency.</div>
+          </li>
+          <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+            <span style="background: var(--primary-light); color: var(--primary); font-weight: bold; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.85rem; height: fit-content;">Obj 3</span>
+            <div><strong>Priority-Driven Bounded Emergency SOS Protocol:</strong> Engineer an out-of-order dispatch queue prioritizing distress packets over media traffic, bounded by TTL=8 and hopCount&le;5, with deduplication ledger loop suppression and bidirectional delivery receipts.</div>
+          </li>
+          <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+            <span style="background: var(--primary-light); color: var(--primary); font-weight: bold; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.85rem; height: fit-content;">Obj 4</span>
+            <div><strong>Atomic Dual-State SQLite-to-MongoDB Reconciliation:</strong> Develop an embedded SQLite relational schema (WAL mode) paired with an automated background BridgeEngine that batch-uploads offline records to MongoDB Atlas upon internet return with zero data loss.</div>
+          </li>
+          <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
+            <span style="background: var(--primary-light); color: var(--primary); font-weight: bold; border-radius: 4px; padding: 0.2rem 0.5rem; font-size: 0.85rem; height: fit-content;">Obj 5</span>
+            <div><strong>Rigorous Empirical Validation:</strong> Benchmark Packet Delivery Ratio (PDR), latency, and power consumption across 750 physical trials on unmodified handsets across Open, Forest, and Classroom environments.</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 5. Methodology -->
+      <section id="methodology" class="academic-card reveal">
+        <h2><span class="card-num-badge">05</span> Research Methodology (DSRM Framework)</h2>
+        <p>
+          This study employs the <strong>Design Science Research Methodology (DSRM)</strong> formalized by Peffers et al. (2007), combined with quantitative physical field experimentation.
+        </p>
+
+        <!-- DSRM Workflow Figure 3.1 -->
+        <div class="figure-showcase">
+          <div class="figure-header">
+            <h3>Figure 3.1: Design Science Research Methodology (DSRM) Workflow</h3>
+            <span class="notice-badge">DSRM Lifecycle</span>
+          </div>
+          <div class="figure-img-container">
+            <img src="images/figure_3_1_dsrm_workflow.png" alt="DSRM Workflow Stages" loading="lazy">
+          </div>
+          <div class="figure-caption">
+            <strong>Methodology Execution:</strong> The 6 progressive stages from Problem Identification to Rigorous Empirical Evaluation and Academic Thesis Defense.
+          </div>
+        </div>
+
+        <!-- Testing Environments Figure 3.2 -->
+        <div class="figure-showcase">
+          <div class="figure-header">
+            <h3>Figure 3.2: Experimental Field Testing Topologies &amp; Environments</h3>
+            <span class="notice-badge">Field Testbed</span>
+          </div>
+          <div class="figure-img-container">
+            <img src="images/figure_3_2_testing_environments.png" alt="Experimental Testing Environments" loading="lazy">
+          </div>
+          <div class="figure-caption">
+            <strong>RF Propagation Environments:</strong> (Panel A) Open Recreational Area (LOS), (Panel B) Light Forest Canopy (NLOS Foliage Scattering), and (Panel C) University Academic Classrooms (Multi-Wall Concrete Obstructions).
+          </div>
+        </div>
+
+        <h4 style="margin: 1.5rem 0 0.5rem; color: var(--secondary);">Empirical Findings Summary (750 Repeated Trials)</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+          <div class="figure-showcase" style="margin-bottom: 0;">
+            <div class="figure-img-container">
+              <img src="images/figure_6_1_pdr_evaluation.png" alt="PDR Evaluation Graph" loading="lazy">
+            </div>
+            <div class="figure-caption">
+              <strong>Figure 6.1: Packet Delivery Ratio (PDR):</strong> 99.5% at 20m in Open Area, 86.4% through two reinforced concrete walls.
+            </div>
+          </div>
+          <div class="figure-showcase" style="margin-bottom: 0;">
+            <div class="figure-img-container">
+              <img src="images/figure_6_2_latency_evaluation.png" alt="Latency Evaluation Graph" loading="lazy">
+            </div>
+            <div class="figure-caption">
+              <strong>Figure 6.2: End-to-End Latency:</strong> 184ms to 842ms across all distances, well beneath the 1,500ms safety critical threshold.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Technologies Used -->
+      <section id="technologies" class="academic-card reveal">
+        <h2><span class="card-num-badge">06</span> Technologies &amp; Software Frameworks Used</h2>
+        <p>
+          Production-grade, open-source, and standardized technology stacks utilized across the mobile client and backend cloud services:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1.5rem;">
+          <div style="background: var(--bg-card-alt); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="color: var(--primary); margin-bottom: 0.75rem;">Mobile Client Stack</h4>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+              <li><strong>Flutter SDK (v3.19.x) &amp; Dart:</strong> Cross-platform reactive client compiling to ARM64 native code.</li>
+              <li><strong>Riverpod:</strong> Predictable unidirectional reactive state management.</li>
+              <li><strong>GoRouter:</strong> Declarative deep-linking and hierarchical routing.</li>
+              <li><strong>Google Nearby Connections (v18.3):</strong> Hybrid BLE discovery promoted to Wi-Fi Direct sockets.</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-card-alt); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="color: var(--accent); margin-bottom: 0.75rem;">Geospatial &amp; Persistence</h4>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+              <li><strong>SQLite v3.4x (sqflite):</strong> Embedded relational engine with Write-Ahead Logging (WAL) and ACID guarantees.</li>
+              <li><strong>flutter_map &amp; MBTiles:</strong> Offline vector and raster tile archives with zero network requests.</li>
+              <li><strong>FusedLocationProviderClient:</strong> High-precision GNSS hardware ingestion (GPS, GLONASS, Galileo).</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-card-alt); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h4 style="color: var(--secondary); margin-bottom: 0.75rem;">Cloud &amp; Backend Stack</h4>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-muted);">
+              <li><strong>Node.js (v18 LTS) &amp; Express:</strong> High-concurrency RESTful API endpoints for BridgeEngine batch ingestion.</li>
+              <li><strong>MongoDB Atlas:</strong> Distributed NoSQL document storage with spatial GeoJSON indexing.</li>
+              <li><strong>Socket.IO:</strong> Real-time bi-directional events for online trip modes.</li>
+              <li><strong>Monsoon Power Monitor:</strong> High-voltage hardware telemetry tracking handset current draw.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Comprehensive Subsystem & Feature Architecture -->
+      <section id="subsystem-features" class="academic-card">
+        <h2><span class="card-num-badge">07</span> Subsystems &amp; Complete Feature Breakdown</h2>
+        <p>
+          TrailLink unifies four distinct research specializations. Below is an exhaustive breakdown of all core features, algorithmic mechanisms, and responsibilities distributed across the four collaborative subsystems and group members:
+        </p>
+
+        <div class="subsystem-grid">
+          <!-- Subsystem 1 Deep Dive -->
+          <div class="subsystem-card theme-sapphire">
+            <div class="subsystem-header">
+              <div class="subsystem-title-group">
+                <h3>Subsystem 1: Offline Location, Mapping &amp; Emergency SOS Coordination</h3>
+                <p>Primary geospatial situational awareness and life-safety backbone of the TrailLink ecosystem.</p>
+              </div>
+              <div class="subsystem-lead-tag">
+                <span class="pulsing-dot"></span> Lead: Nethula Dulsara (IT22544490)
+              </div>
+            </div>
+
+            <div class="subsystem-feature-grid">
+              <div class="subsystem-feature-box">
+                <h4>&#128506;&#65039; Geospatial &amp; Mapping Features</h4>
+                <ul>
+                  <li><strong>Fused GNSS Coordinate Capture:</strong> Acquires continuous GPS/GLONASS/Galileo location fixes in foreground and background states without root privileges.</li>
+                  <li><strong>512-byte MTU Packaging:</strong> Serializes spatial fixes into compact JSON payloads under 240 bytes to ensure rapid broadcast.</li>
+                  <li><strong>Offline MBTiles Rendering:</strong> Locally renders interactive vector and raster map tiles covering 25 km&sup2; wilderness zones without internet access.</li>
+                  <li><strong>3-Tier Temporal Freshness Decay:</strong> Dynamic function &fnof;<sub>freshness</sub>(&Delta;t) tagging teammate pins: Fresh (&le;5 min), Old (5&ndash;15 min), and Stale (&gt;15 min).</li>
+                </ul>
+              </div>
+
+              <div class="subsystem-feature-box">
+                <h4>&#128680; Emergency SOS &amp; Cloud Bridge Features</h4>
+                <ul>
+                  <li><strong>Out-of-Order Queue Preemption:</strong> Emergency panic packets interrupt and preempt all ongoing background text and voice queues.</li>
+                  <li><strong>Bounded Multi-Hop Relaying:</strong> Controlled flood routing bounded by Time-To-Live (TTL=8) and hopCount &le; 5.</li>
+                  <li><strong>Idempotent Loop Suppression:</strong> Evaluates packet UUIDs against <code>processed_offline_packets</code> ledger to prevent broadcast storms.</li>
+                  <li><strong>BridgeEngine Cloud Reconciliation:</strong> Detects backhaul re-entry and batches unsynced SQLite records to MongoDB with ACID rollback guarantees (0% data loss).</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Real App Deployment Screens Showcase for Subsystem 1 -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.75rem;">
+              <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.85rem; color: var(--apple-black);">
+                  &#128506;&#65039; Offline Vector Map &amp; Teammate Tracking
+                </div>
+                <img src="images/app_screen_map.jpg" alt="TrailLink Offline Map Screen" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: var(--shadow-md); border: 3px solid #f1f5f9;">
+                <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.85rem; line-height: 1.5;">
+                  Live Android deployment showing cached vector tiles around Kaduwela Road and fused coordinate telemetry (6.914671, 79.973145) with 17m accuracy.
+                </div>
+              </div>
+              <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+                <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.85rem; color: var(--apple-black);">
+                  &#128680; Priority Emergency SOS Panic Dispatch
+                </div>
+                <img src="images/app_screen_sos.jpg" alt="TrailLink Emergency SOS Screen" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: var(--shadow-md); border: 3px solid #f1f5f9;">
+                <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.85rem; line-height: 1.5;">
+                  One-touch SOS panic trigger preemption queue with bidirectional acknowledgement delivery ledger and coordinate packaging.
+                </div>
+              </div>
+            </div>
+
+            <!-- Figure 4.2 Component Architecture -->
+            <div class="figure-showcase" style="margin-top: 2rem; margin-bottom: 1.5rem;">
+              <div class="figure-header">
+                <h3>Figure 4.2: Exhaustive Internal Subsystem Architecture (Location &amp; SOS)</h3>
+                <span class="notice-badge">Internal Subsystem</span>
+              </div>
+              <div class="figure-img-container">
+                <img src="images/figure_4_2_component_architecture.png" alt="Internal Subsystem Architecture" loading="lazy">
+              </div>
+              <div class="figure-caption">
+                <strong>Subsystem Data Flow:</strong> Internal decoupling between GNSS hardware, SQLite Write-Ahead Logging persistence, Out-of-Order Queue Dispatcher, and upstream BridgeEngine.
+              </div>
+            </div>
+
+            <!-- Figure 4.3 Sequence Diagram -->
+            <div class="figure-showcase" style="margin-bottom: 0;">
+              <div class="figure-header">
+                <h3>Figure 4.3: End-to-End Sequence of Emergency SOS Dispatch &amp; Cloud Sync</h3>
+                <span class="notice-badge">Sequence Workflow</span>
+              </div>
+              <div class="figure-img-container">
+                <img src="images/figure_4_3_sequence_diagram.png" alt="Emergency SOS Sequence Diagram" loading="lazy">
+              </div>
+              <div class="figure-caption">
+                <strong>Emergency Lifecycle:</strong> Distress trigger &rarr; Priority interrupt &rarr; Ad-hoc mesh forwarding &rarr; Local siren/haptic actuation &rarr; Bidirectional acknowledgment &rarr; Cloud reconciliation.
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsystem 2 Deep Dive -->
+          <div class="subsystem-card theme-indigo">
+            <div class="subsystem-header">
+              <div class="subsystem-title-group">
+                <h3>Subsystem 2: Store-and-Forward Delay-Tolerant Text Messaging</h3>
+                <p>Asynchronous conversational communication across intermittent and disjoint mobile mesh partitions.</p>
+              </div>
+              <div class="subsystem-lead-tag">
+                Lead: Pabodhana D M D I (IT22168290)
+              </div>
+            </div>
+
+            <div class="subsystem-feature-grid">
+              <div class="subsystem-feature-box">
+                <h4>&#128172; Core Messaging Features</h4>
+                <ul>
+                  <li><strong>Delay-Tolerant Network (DTN) Routing:</strong> Implements opportunistic Store-Carry-and-Forward routing when direct paths are unavailable.</li>
+                  <li><strong>Local Outbox Queue Management:</strong> Caches unsent text messages in local SQLite tables until reachable peer encounters occur.</li>
+                  <li><strong>Offline Channel Scoping:</strong> Isolates communication within cryptographic channel identifiers (e.g., <code>TL-OFF-DEMO</code>).</li>
+                </ul>
+              </div>
+              <div class="subsystem-feature-box">
+                <h4>&#128274; Reliability &amp; Bus Interlock</h4>
+                <ul>
+                  <li><strong>Delivery Receipts (ACK):</strong> End-to-end cryptographic delivery status indicators (Sent &rarr; Delivered &rarr; Acknowledged).</li>
+                  <li><strong>Emergency Queue Yielding:</strong> Ingests high-priority SOS interrupt signals to suspend outgoing chat transmissions and clear wireless spectrum.</li>
+                  <li><strong>Unified Cloud Convergence:</strong> Bundles chat logs alongside spatial fixes during backhaul reconciliation.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Real App Screen for Subsystem 2 -->
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.75rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+              <img src="images/app_screen_offline_chat.jpg" alt="Offline Store-and-Forward Chat Screen" style="width: 100%; max-width: 220px; border-radius: 20px; box-shadow: var(--shadow-md); border: 3px solid #f1f5f9;">
+              <div style="flex: 1; min-width: 260px;">
+                <span class="notice-badge" style="margin-bottom: 0.65rem; background: #eef2ff; color: #4f46e5; border-color: #c7d2fe;">Real App UI Deployment</span>
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--apple-black); margin-bottom: 0.5rem;">Offline Delay-Tolerant Text Messaging &amp; Delivery Receipts</h4>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.85rem;">
+                  Screen capture from actual Android COTS handset demonstrating peer-to-peer offline chat over channel <code>TL-OFF-QG4J</code>, persistent outbox queue ("Waiting to send"), teammate badges, and real-time delivery status ticks (Delivered &#10003;&#10003;).
+                </p>
+                <div style="font-size: 0.85rem; color: var(--text-tertiary);">
+                  <strong>Key Protocol Verified:</strong> Transactional store-and-forward SQLite persistence guaranteeing zero message loss across intermittent physical mesh disconnects.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsystem 3 Deep Dive -->
+          <div class="subsystem-card theme-cyan">
+            <div class="subsystem-header">
+              <div class="subsystem-title-group">
+                <h3>Subsystem 3: Dual-Pipeline Voice Radio (Push-to-Talk)</h3>
+                <p>Versatile voice communications adaptable to variable wireless link bandwidth constraints.</p>
+              </div>
+              <div class="subsystem-lead-tag">
+                Lead: Vitharana G.G (IT22894038)
+              </div>
+            </div>
+
+            <div class="subsystem-feature-grid">
+              <div class="subsystem-feature-box">
+                <h4>&#127897;&#65039; Dual-Mode Audio Pipelines</h4>
+                <ul>
+                  <li><strong>Pipeline A - Compressed Voice Notes:</strong> Encodes short-burst AAC-LC audio clips optimized for low-bandwidth, high-latency ad-hoc links.</li>
+                  <li><strong>Pipeline B - Live PCM-16 Streaming:</strong> Streams raw half-duplex voice frames across high-bandwidth Wi-Fi Direct sockets.</li>
+                  <li><strong>Adaptive Splay-Tree Jitter Buffer:</strong> Dynamically smooths acoustic playback under fluctuating packet arrival times.</li>
+                </ul>
+              </div>
+              <div class="subsystem-feature-box">
+                <h4>&#127911; Floor Control &amp; Preemption</h4>
+                <ul>
+                  <li><strong>Half-Duplex Floor Arbitration:</strong> Prevents mutual acoustic talk-over through distributed state token locking.</li>
+                  <li><strong>SOS Audio Muting:</strong> Mutes ongoing voice streaming instantly upon receiving an emergency SOS distress alert.</li>
+                  <li><strong>Acoustic Siren Actuation:</strong> Automatically triggers maximum-volume distress beacon audio on receiving nodes.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Real App Screen for Subsystem 3 -->
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.75rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+              <img src="images/app_screen_chat_ptt.jpg" alt="Dual-Pipeline Voice Radio Screen" style="width: 100%; max-width: 220px; border-radius: 20px; box-shadow: var(--shadow-md); border: 3px solid #f1f5f9;">
+              <div style="flex: 1; min-width: 260px;">
+                <span class="notice-badge" style="margin-bottom: 0.65rem; background: #ecfeff; color: #0891b2; border-color: #a5f3fc;">Real App UI Deployment</span>
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--apple-black); margin-bottom: 0.5rem;">Live Push-to-Talk &amp; Asynchronous Voice Memos</h4>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.85rem;">
+                  Screen capture from actual COTS device showing the tactile "Hold to Stream" half-duplex floor arbitration button, channel state indicator ("Channel free"), and asynchronous AAC-LC voice memo player with delivered delivery ticks.
+                </p>
+                <div style="font-size: 0.85rem; color: var(--text-tertiary);">
+                  <strong>Key Pipeline Verified:</strong> Automatic fallback from high-throughput PCM-16 live stream to compressed AAC-LC memo when peer distance exceeds 35 meters.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsystem 4 Deep Dive -->
+          <div class="subsystem-card theme-emerald">
+            <div class="subsystem-header">
+              <div class="subsystem-title-group">
+                <h3>Subsystem 4: Connectivity Intelligence &amp; Adaptive Mesh Assessment</h3>
+                <p>Evaluates physical radio conditions and adapts application transmission parameters to maximize network longevity.</p>
+              </div>
+              <div class="subsystem-lead-tag">
+                Lead: Thanujana D.O (IT22148704)
+              </div>
+            </div>
+
+            <div class="subsystem-feature-grid">
+              <div class="subsystem-feature-box">
+                <h4>&#128246; Link Health Index Q &in; [0, 100]</h4>
+                <ul>
+                  <li><strong>Continuous Telemetry Probing:</strong> Computes moving-average Received Signal Strength Indicators (RSSI) and Round-Trip Time (RTT).</li>
+                  <li><strong>Hysteresis State Protection:</strong> Enforces &plusmn;10 point hysteresis buffers to prevent rapid, erratic connection state bouncing.</li>
+                  <li><strong>Visual RF Health Badges:</strong> Provides real-time signal confidence indicators on active teammate pins.</li>
+                </ul>
+              </div>
+              <div class="subsystem-feature-box">
+                <h4>&#9889; Dynamic System Adaptation</h4>
+                <ul>
+                  <li><strong>Cadence Scaling:</strong> Scales location gossiping from 60s (robust link Q &ge; 75) down to 180s (fringe link Q &lt; 40) to preserve battery.</li>
+                  <li><strong>Pre-Disconnect Alerting:</strong> Issues auditory and visual warnings when peers approach physical separation limits (Q &lt; 20).</li>
+                  <li><strong>Topology Adaptation:</strong> Advises users to reform mesh clusters when connection degradation is detected.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Real App Screen for Subsystem 4 -->
+            <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.5rem; margin-top: 1.75rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; box-shadow: 0 4px 14px rgba(0,0,0,0.03);">
+              <img src="images/app_screen_compass.jpg" alt="Network Compass Direction Finder Screen" style="width: 100%; max-width: 220px; border-radius: 20px; box-shadow: var(--shadow-md); border: 3px solid #f1f5f9;">
+              <div style="flex: 1; min-width: 260px;">
+                <span class="notice-badge" style="margin-bottom: 0.65rem; background: #f0fdf4; color: #16a34a; border-color: #bbf7d0;">Real App UI Deployment</span>
+                <h4 style="font-size: 1.25rem; font-weight: 800; color: var(--apple-black); margin-bottom: 0.5rem;">Network Compass &amp; Internet Direction Finder</h4>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.85rem;">
+                  Screen capture demonstrating real-time Link Health evaluation: 180° directional compass guide pointing toward historical connectivity zones, live Mbps speed gauge, and automatic hotspot breadcrumb logging.
+                </p>
+                <div style="font-size: 0.85rem; color: var(--text-tertiary);">
+                  <strong>Telemetry Loop:</strong> Probes local RF signals and guides users to internet-capable rendezvous coordinates for automated cloud bridge synchronization.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cross-Subsystem Integration Bus: Figure 5.1 -->
+        <div class="figure-showcase" style="margin-top: 2rem; margin-bottom: 0;">
+          <div class="figure-header">
+            <h3>Figure 5.1: Multi-Modal Inter-Component Bus &amp; Control Flow</h3>
+            <span class="notice-badge">Integration Architecture</span>
+          </div>
+          <div class="figure-img-container">
+            <img src="images/figure_5_1_intercomponent_bus.png" alt="Multi-Modal Inter-Component Bus" loading="lazy">
+          </div>
+          <div class="figure-caption">
+            <strong>Cross-Component Synchronization:</strong> Illustrating how emergency interrupts, cloud reconciliation, dynamic cadence scaling, and audio floor arbitrations interface synchronously across all four subsystems.
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>TrailLink Research Project</h3>
+        <p>An Infrastructure-Independent Mobile Mesh Collaboration Platform for Remote Expeditions and Search-and-Rescue Missions. SLIIT CDAP 2026.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html?v=3.2">Home</a></li>
+          <li><a href="domain.html?v=3.2">Domain</a></li>
+          <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2">Presentations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project Members</h4>
+        <ul>
+          <li><a href="about.html?v=3.2">Nethula Dulsara (IT22544490)</a></li>
+          <li><a href="about.html?v=3.2">Thanujana D.O (IT22148704)</a></li>
+          <li><a href="about.html?v=3.2">Pabodhana D M D I (IT22168290)</a></li>
+          <li><a href="about.html?v=3.2">Vitharana G.G (IT22894038)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Faculty</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">
+          Sri Lanka Institute of Information Technology (SLIIT)<br>
+          Faculty of Computing &bull; Dept of IT
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div>&copy; 2026 TrailLink Research Group &bull; SLIIT Faculty of Computing.</div>
+        <div>Domain &amp; Methodology Specification &bull; Disk &lt; 20 MB Compliant</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3.3"></script>
+</body>
+</html>

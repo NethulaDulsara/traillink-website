@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TrailLink: Infrastructure-Independent Mobile Mesh Collaboration Platform for Remote Expeditions and Search-and-Rescue Missions. SLIIT CDAP Final Year Research Project.">
+  <title>Home | TrailLink Academic Research Portal</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="css/style.css?v=3.3">
+  <link rel="icon" type="image/png" href="images/traillink_logo.png">
+  <script>
+    (function() {
+      function clean() {
+        document.querySelectorAll("nav a, footer a").forEach(function(a) {
+          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
+            var li = a.closest("li");
+            if (li) li.remove(); else a.remove();
+          }
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", clean);
+      } else {
+        clean();
+      }
+      window.addEventListener("pageshow", clean);
+    })();
+  </script>
+</head>
+<body>
+
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html?v=3.2" class="brand-wrapper" aria-label="TrailLink Home">
+        <img src="images/traillink_logo.png" alt="TrailLink Logo" class="brand-logo">
+        <div class="brand-text">
+          <h2>TrailLink</h2>
+          <span>Research Portal &bull; CDAP</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Navigation conforming to CDAP guidelines: Home, Domain, Milestones, Documents, Presentations, About us, Contact us -->
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html?v=3.2" class="nav-link active">Home</a></li>
+          <li><a href="domain.html?v=3.2" class="nav-link">Domain</a></li>
+          <li><a href="milestones.html?v=3.2" class="nav-link">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
+          <li><a href="about.html?v=3.2" class="nav-link">About Us</a></li>
+          <li><a href="contact.html?v=3.2" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cinematic Apple Hero Section with Ambient Glow & Floating 3D Device -->
+  <section class="hero-apple">
+    <div class="ambient-light-orb orb-blue"></div>
+    <div class="ambient-light-orb orb-cyan"></div>
+
+    <div class="hero-apple-container">
+      <div class="reveal">
+        <h1>
+          Off-Grid Safety &amp; Communications for <span class="text-gradient-cyan">Remote Expeditions &amp; SAR Missions</span>
+        </h1>
+        <p class="hero-lead-apple">
+          Terrestrial cellular networks collapse during natural disasters and fail to cover remote wilderness gorges. TrailLink establishes an unprivileged, user-space peer-to-peer mobile mesh network on unmodified consumer smartphones—integrating real-time offline vector mapping, priority emergency SOS routing, store-and-forward text, live voice radio, and atomic cloud reconciliation.
+        </p>
+        <div class="hero-actions">
+          <a href="#quick-deliverables" class="btn-apple btn-apple-primary">⚡ Quick Deliverables &amp; Presentations &#9662;</a>
+          <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="btn-apple btn-apple-glass">📄 Research Paper (PDF) &nearr;</a>
+          <a href="domain.html?v=3.2" class="btn-apple btn-apple-glass">Explore Domain &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Photorealistic Apple Smartphone Device Frame Mockup -->
+      <div class="device-perspective-wrap reveal-scale delay-200">
+        <!-- Floating Live Telemetry Chips -->
+        <div class="floating-status-chip chip-left">
+          <span style="font-size: 1.3rem;">&#128506;</span>
+          <div>
+            <div style="font-size: 0.72rem; color: #7dd3fc; text-transform: uppercase; font-weight: 700;">Live Mesh Telemetry</div>
+            <div style="font-size: 0.95rem; font-weight: 800;">99.5% PDR &bull; 20m LOS</div>
+          </div>
+        </div>
+
+        <div class="floating-status-chip chip-right">
+          <span style="font-size: 1.3rem;">&#9889;</span>
+          <div>
+            <div style="font-size: 0.72rem; color: #34d399; text-transform: uppercase; font-weight: 700;">Zero Infrastructure</div>
+            <div style="font-size: 0.95rem; font-weight: 800;">100% COTS Handsets</div>
+          </div>
+        </div>
+
+        <div class="phone-mockup-frame">
+          <!-- Dynamic Island -->
+          <div class="phone-dynamic-island">
+            <div class="island-camera"></div>
+            <div class="island-sensor"></div>
+          </div>
+
+          <!-- Phone Screen Container with Real TrailLink Screen -->
+          <div class="phone-screen-container">
+            <div class="screen-glare-overlay"></div>
+            <img src="images/app_screen_map.jpg" alt="TrailLink Mobile App Topographic Map Screen" id="heroPhoneImg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Evaluation Stats Strip -->
+  <section class="metrics-apple-strip" aria-label="Empirical research highlights">
+    <div class="metrics-container">
+      <div class="metric-box reveal">
+        <h3>4</h3>
+        <p>Unified Subsystems</p>
+      </div>
+      <div class="metric-box reveal delay-100">
+        <h3>0</h3>
+        <p>Extra Hardware (100% COTS)</p>
+      </div>
+      <div class="metric-box reveal delay-200">
+        <h3 style="color: var(--apple-blue);">99.5%</h3>
+        <p>Packet Delivery Ratio (20m)</p>
+      </div>
+      <div class="metric-box reveal delay-300">
+        <h3 style="color: var(--apple-emerald);">&lt; 850 ms</h3>
+        <p>SOS Multi-Wall Latency</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Academic Deliverables & Presentations Fast-Access Hub -->
+  <section id="quick-deliverables" class="quick-deliverables-section">
+    <div class="quick-deliverables-header reveal">
+      <span class="notice-badge" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border-color: rgba(52, 211, 153, 0.4);">
+        ⚡ Fast-Access Evaluation Hub
+      </span>
+      <h2>Key Project Deliverables &amp; Presentation Decks</h2>
+      <p>
+        Quick one-click access for supervisors and examiners to review our published IEEE-format research paper and official CDAP presentation slide decks on Microsoft SharePoint.
+      </p>
+    </div>
+
+    <div class="quick-grid">
+      <!-- 1. Research Paper -->
+      <article class="quick-card featured-research-card reveal">
+        <div class="quick-card-top">
+          <span class="quick-badge-tag blue">&#128196; IEEE Format &bull; 6 Pages</span>
+          <div class="quick-card-icon" style="background: #eff6ff; color: #2563eb;">&#128220;</div>
+        </div>
+        <h3 class="quick-card-title">Academic Research Paper</h3>
+        <p class="quick-card-desc">
+          "Offline-First Location Sharing, Mapping, and Priority-Based Bounded SOS Routing in Hybrid Mobile Ad-Hoc Networks: The TrailLink Platform."
+        </p>
+        <div class="quick-card-actions">
+          <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="btn btn-primary">
+            &#128065; Read Paper (PDF) &nearr;
+          </a>
+          <a href="docs/R26-IT-135_Research_Paper.pdf" download="R26-IT-135_Research_Paper.pdf" class="btn btn-secondary">
+            &#11015; Download PDF (205 KB)
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Project Proposal Presentation -->
+      <article class="quick-card reveal delay-100">
+        <div class="quick-card-top">
+          <span class="quick-badge-tag">&#128202; Milestone 01 &bull; 10%</span>
+          <div class="quick-card-icon" style="background: #ecfdf5; color: #059669;">PPT</div>
+        </div>
+        <h3 class="quick-card-title">Project Proposal Presentation</h3>
+        <p class="quick-card-desc">
+          Official deck: <code>R26-IT-135_Proposal Presentation.pptx</code>. Research rationale, telecom vulnerabilities, 4-component architecture, and DSRM methodology.
+        </p>
+        <div class="quick-card-actions">
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQC15Bek_uIVSIOEgPkZGYOIATdTR-P4vl9fgC8nMhyUMdo?e=iXcJzA" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            &#128640; Open Slides in SharePoint &nearr;
+          </a>
+          <a href="presentations.html?v=3.2" class="btn btn-secondary">
+            &#128065; View Slide Archive
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Progress Presentation 1 (PP1) -->
+      <article class="quick-card reveal delay-200">
+        <div class="quick-card-top">
+          <span class="quick-badge-tag purple">&#128202; Milestone 02 &bull; 15%</span>
+          <div class="quick-card-icon" style="background: #f5f3ff; color: #7c3aed;">PPT</div>
+        </div>
+        <h3 class="quick-card-title">Progress Presentation 1 (PP1)</h3>
+        <p class="quick-card-desc">
+          Official deck: <code>R26-IT-135_Progress Presentation 1.pptx</code>. Architectural design, MoSCoW requirements, unprivileged P2P discovery promotion, and SQLite WAL schema.
+        </p>
+        <div class="quick-card-actions">
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQD188hyQa2QQ5qhWTpDg05fAec-mhogsgdaYyhh0Opthes?e=thUgjJ" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            &#128640; Open Slides in SharePoint &nearr;
+          </a>
+          <a href="presentations.html?v=3.2" class="btn btn-secondary">
+            &#128065; View Slide Archive
+          </a>
+        </div>
+      </article>
+
+      <!-- 4. Progress Presentation 2 (PP2) -->
+      <article class="quick-card reveal delay-300">
+        <div class="quick-card-top">
+          <span class="quick-badge-tag">&#128202; Milestone 03 &bull; 18%</span>
+          <div class="quick-card-icon" style="background: #ecfdf5; color: #059669;">PPT</div>
+        </div>
+        <h3 class="quick-card-title">Progress Presentation 2 (PP2)</h3>
+        <p class="quick-card-desc">
+          Official deck: <code>R26-IT-135 .pptx</code>. 50% implementation review, offline MBTiles vector maps, out-of-order emergency SOS preemption, and loop suppression ledgers.
+        </p>
+        <div class="quick-card-actions">
+          <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQDB-FjbmU2WSJPV8QAsLF9UARYEhjuR_JwZ-eSzOdaPLUQ?e=oGb8f1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            &#128640; Open Slides in SharePoint &nearr;
+          </a>
+          <a href="presentations.html?v=3.2" class="btn btn-secondary">
+            &#128065; View Slide Archive
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Apple Interactive App Showcase Section (Click to switch screens!) -->
+  <section id="showcase" class="showcase-apple-section">
+    <div class="showcase-header reveal">
+      <span class="notice-badge" style="margin-bottom: 0.75rem;">Interactive System Experience</span>
+      <h2>Designed for Zero-Infrastructure Realities</h2>
+      <p>
+        Explore how TrailLink's unprivileged user-space architecture translates into a life-critical mobile safety application. Tap through each subsystem to inspect the user interface in action.
+      </p>
+    </div>
+
+    <!-- Showcase Navigation Tabs -->
+    <div class="showcase-tabs-nav reveal delay-100">
+      <button class="showcase-tab-btn active" data-showcase="home">
+        <span>&#127969;</span> Trip Home Portal
+      </button>
+      <button class="showcase-tab-btn" data-showcase="map">
+        <span>&#128506;</span> Offline Vector Map
+      </button>
+      <button class="showcase-tab-btn" data-showcase="sos">
+        <span>&#128680;</span> Priority Emergency SOS
+      </button>
+      <button class="showcase-tab-btn" data-showcase="chat">
+        <span>&#127897;</span> Voice Radio &amp; PTT
+      </button>
+      <button class="showcase-tab-btn" data-showcase="link">
+        <span>&#129517;</span> Network Compass
+      </button>
+    </div>
+
+    <!-- Interactive Display (Phone Frame + Feature Deep Dive) -->
+    <div class="showcase-display-grid">
+      <!-- 3D Phone Screen -->
+      <div class="showcase-phone-center reveal-scale delay-200">
+        <div class="phone-mockup-frame" style="width: 300px; height: 610px; animation: none;">
+          <div class="phone-dynamic-island">
+            <div class="island-camera"></div>
+            <div class="island-sensor"></div>
+          </div>
+          <div class="phone-screen-container">
+            <div class="screen-glare-overlay"></div>
+            <img src="images/app_screen_home.jpg" alt="TrailLink App Showcase Screen" id="showcaseScreenImg">
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Details Pane -->
+      <div class="showcase-info-pane reveal delay-300">
+        <h3 id="showcaseTitle">Trip Management &amp; Offline Mode Portal</h3>
+        <div class="lead-sub" id="showcaseLead">TrailLink Core &bull; Unprivileged COTS Handset Architecture</div>
+        <p id="showcaseDesc">
+          The primary control dashboard establishing disconnected wilderness sessions. Generates offline trip identifiers (e.g. TL-OFF-QG4J), isolates cryptographic broadcast channels, and caches all trip state locally with zero internet dependency.
+        </p>
+        <ul class="showcase-feature-list" id="showcaseList">
+          <li>Offline Trip Initialization (e.g. Ella wilderness expedition TL-OFF-QG4J)</li>
+          <li>Instant unprivileged mode verification without root access or kernel patches</li>
+          <li>Local cryptographic profile &amp; multi-peer cluster join orchestration</li>
+          <li>One-tap rapid navigation to Map, Chat, SOS, and Central Radio Radar</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a href="domain.html#subsystem-features" class="btn-apple btn-apple-primary" style="font-size: 0.88rem; padding: 0.65rem 1.35rem;">
+            Read Complete Technical Architecture &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content: Abstract & Bento Grid -->
+  <main class="main-content">
+    <div class="content-container">
+
+      <!-- Executive Abstract Card -->
+      <section class="section-header reveal">
+        <span class="notice-badge">Executive Summary</span>
+        <h2 style="font-size: 2.25rem; margin-top: 0.75rem;">Research Project Abstract</h2>
+        <p>An academic investigation solving the fundamental communication void in zero-infrastructure environments without root privileges or expensive satellite hardware.</p>
+      </section>
+
+      <div class="bento-card bento-highlight reveal delay-100" style="margin-bottom: 4rem;">
+        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); margin-bottom: 1.25rem;">
+          Reliable spatial orientation and rapid crisis dissemination represent indispensable operational requirements when wilderness expeditions, backcountry search-and-rescue (SAR) teams, and disaster response personnel operate beyond terrestrial telecommunications coverage. Conventional mobile navigation and messaging applications are fundamentally predicated on persistent cloud access, causing them to degrade abruptly into inert interfaces when centralized cellular infrastructure is damaged, saturated, or absent. While Mobile Ad-Hoc Network (MANET) paradigms provide theoretical routing models, deploying these protocols on commercial off-the-shelf (COTS) Android smartphones is constrained by operating-system sandboxing that prohibits raw Layer-3 packet injection without invasive root privileges.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); margin: 0;">
+          The <strong>TrailLink</strong> research initiative addresses this technological void by designing, implementing, and empirically validating a four-tiered mobile mesh platform executing entirely in unprivileged Android user-space. Leveraging Google Nearby Connections (Bluetooth Low Energy discovery dynamically promoted to Wi-Fi Direct sockets), embedded SQLite with Write-Ahead Logging (WAL), pre-rendered offline MBTiles vector maps, and out-of-order priority emergency queuing, the platform achieves robust, real-time coordination under zero-infrastructure conditions.
+        </p>
+      </div>
+
+      <!-- Bento Grid: The 4 Synchronized Subsystems -->
+      <section class="section-header reveal">
+        <span class="notice-badge">Platform Architecture</span>
+        <h2 style="font-size: 2.25rem; margin-top: 0.75rem;">The Four Collaborative Subsystems</h2>
+        <p>A unified multi-modal platform distributing specialized safety capabilities across a shared application-layer packet bus.</p>
+      </section>
+
+      <div class="bento-grid">
+        <!-- Subsystem 1 (Featured - Span 8) -->
+        <article class="bento-card bento-col-8 bento-highlight reveal">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+            <div class="bento-icon-box">&#128506;</div>
+            <span class="notice-badge" style="background: var(--apple-blue); color: #ffffff; border: none;">Core Safety Subsystem</span>
+          </div>
+          <h3 style="font-size: 1.6rem; margin-bottom: 0.4rem;">1. Offline Location, Mapping &amp; Priority SOS</h3>
+          <div style="font-size: 0.9rem; font-weight: 700; color: var(--apple-blue); margin-bottom: 1rem;">
+            Lead Researcher: Nethula Dulsara (IT22544490)
+          </div>
+          <p style="margin-bottom: 1.25rem;">
+            Continuous GNSS ingestion, offline MBTiles vector map rendering, dynamic spatio-temporal freshness decay classification, out-of-order emergency SOS dispatching with loop suppression, and atomic SQLite-to-MongoDB cloud synchronization.
+          </p>
+          <div style="margin-top: auto; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+            <span class="notice-badge" style="font-size: 0.75rem;">Sub-850ms SOS Latency</span>
+            <span class="notice-badge" style="font-size: 0.75rem;">3-Tier Freshness Decay</span>
+            <span class="notice-badge" style="font-size: 0.75rem;">Zero Data Loss BridgeEngine</span>
+          </div>
+        </article>
+
+        <!-- Subsystem 2 (Span 4) -->
+        <article class="bento-card bento-col-4 reveal delay-100">
+          <div class="bento-icon-box" style="background: #f1f5f9; color: #334155;">&#128172;</div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem;">2. Store-and-Forward Text</h3>
+          <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-tertiary); margin-bottom: 0.75rem;">
+            Lead: Pabodhana D M D I (IT22168290)
+          </div>
+          <p style="font-size: 0.92rem; margin-bottom: 1rem;">
+            Decentralized delay-tolerant chat managing persistent outbox queues, asynchronous gossip relaying across disconnected partitions, and end-to-end cryptographic delivery receipts.
+          </p>
+          <div style="margin-top: auto;">
+            <span class="notice-badge" style="font-size: 0.72rem;">DTN Gossip Relay</span>
+          </div>
+        </article>
+
+        <!-- Subsystem 3 (Span 6) -->
+        <article class="bento-card bento-col-6 reveal delay-200">
+          <div class="bento-icon-box" style="background: #fef2f2; color: #dc2626;">&#128227;</div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem;">3. Dual-Pipeline Voice Radio (PTT)</h3>
+          <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-tertiary); margin-bottom: 0.75rem;">
+            Voice &amp; Audio Streaming Module
+          </div>
+          <p style="font-size: 0.92rem; margin-bottom: 1rem;">
+            Hybrid audio communications combining compressed AAC-LC push-to-talk voice notes for constrained links with low-latency live PCM-16 voice streaming stabilized by an adaptive Splay-Tree Jitter Buffer.
+          </p>
+          <div style="margin-top: auto; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="notice-badge" style="font-size: 0.72rem;">Splay-Tree Jitter Buffer</span>
+            <span class="notice-badge" style="font-size: 0.72rem;">Half-Duplex Floor Arbiter</span>
+          </div>
+        </article>
+
+        <!-- Subsystem 4 (Span 6) -->
+        <article class="bento-card bento-col-6 reveal delay-300">
+          <div class="bento-icon-box" style="background: #f0fdf4; color: #16a34a;">&#128246;</div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.4rem;">4. Link Quality &amp; Mesh Assessment</h3>
+          <div style="font-size: 0.88rem; font-weight: 700; color: var(--text-tertiary); margin-bottom: 0.75rem;">
+            Network &amp; Topology Intelligence Module
+          </div>
+          <p style="font-size: 0.92rem; margin-bottom: 1rem;">
+            Continuous mathematical evaluation of wireless channel health yielding an operational index Q &in; [0, 100] derived from moving-average BLE RSSI samples and round-trip transmission acknowledgments.
+          </p>
+          <div style="margin-top: auto; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="notice-badge" style="font-size: 0.72rem;">Dynamic Cadence Scaling</span>
+            <span class="notice-badge" style="font-size: 0.72rem;">&plusmn;10 Hysteresis Protection</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>TrailLink Research Project</h3>
+        <p>
+          An Infrastructure-Independent Mobile Mesh Collaboration Platform for Remote Expeditions and Search-and-Rescue Missions. Developed for the Comprehensive Design &amp; Analysis Project (CDAP).
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html?v=3.2">Home</a></li>
+          <li><a href="domain.html?v=3.2">Domain</a></li>
+          <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2">Presentations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Project Members</h4>
+        <ul>
+          <li><a href="about.html?v=3.2">Nethula Dulsara (IT22544490)</a></li>
+          <li><a href="about.html?v=3.2">Thanujana D.O (IT22148704)</a></li>
+          <li><a href="about.html?v=3.2">Pabodhana D M D I (IT22168290)</a></li>
+          <li><a href="about.html?v=3.2">Vitharana G.G (IT22894038)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academic Institute</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">
+          Department of Information Technology<br>
+          Faculty of Computing<br>
+          Sri Lanka Institute of Information Technology (SLIIT)
+        </p>
+        <p style="font-size: 0.85rem; color: #94a3b8;">
+          Supervisor: Mr. Vishan Jayasinghearachchi<br>
+          Co-supervisor: Ms. Sasini Hathurusinghe
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div>&copy; 2026 TrailLink Research Group &bull; SLIIT Faculty of Computing. All Rights Reserved.</div>
+        <div>Academic Information Portal &bull; Disk Footprint &lt; 20 MB Compliant</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3.2"></script>
+</body>
+</html>

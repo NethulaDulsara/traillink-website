@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About Us: Research Team Members, Supervisors, Academic Specializations, and Department Details for TrailLink Research Project.">
+  <title>About Us | TrailLink Academic Research Portal</title>
+  <link rel="stylesheet" href="css/style.css?v=3.3">
+  <link rel="icon" type="image/png" href="images/traillink_logo.png">
+  <script>
+    (function() {
+      function clean() {
+        document.querySelectorAll("nav a, footer a").forEach(function(a) {
+          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
+            var li = a.closest("li");
+            if (li) li.remove(); else a.remove();
+          }
+        });
+      }
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", clean);
+      } else {
+        clean();
+      }
+      window.addEventListener("pageshow", clean);
+    })();
+  </script>
+</head>
+
+<body>
+
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html?v=3.2" class="brand-wrapper">
+        <img src="images/traillink_logo.png" alt="TrailLink Logo" class="brand-logo">
+        <div class="brand-text">
+          <h2>TrailLink</h2>
+          <span>Research Portal &bull; CDAP</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html?v=3.2" class="nav-link">Home</a></li>
+          <li><a href="domain.html?v=3.2" class="nav-link">Domain</a></li>
+          <li><a href="milestones.html?v=3.2" class="nav-link">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
+          <li><a href="about.html?v=3.2" class="nav-link active">About Us</a></li>
+          <li><a href="contact.html?v=3.2" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="page-banner-container">
+      <div class="breadcrumbs">
+        <a href="index.html?v=3.2">Home</a> &gt; <span>About Us</span>
+      </div>
+      <h1>About the Research Team &amp; Faculty</h1>
+      <p>
+        Meet the undergraduate researchers, project supervisors, and academic department behind the design,
+        implementation, and empirical validation of the TrailLink mobile mesh platform.
+      </p>
+      <div class="banner-quick-stats" style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem;">
+        <span
+          style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.12); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18);">
+          👥 4 Student Researchers
+        </span>
+        <span
+          style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.12); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18);">
+          🏛️ SLIIT Faculty of Computing
+        </span>
+        <span
+          style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.12); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18);">
+          📱 100% COTS Mobile Mesh
+        </span>
+        <span
+          style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.12); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18);">
+          🎓 CDAP Academic Year 2026
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-container">
+
+      <!-- Research Team Members Grid -->
+      <section class="section-header">
+        <span class="section-tag">CDAP Research Group &bull; Academic Year 2026</span>
+        <h2 class="section-title">Undergraduate Research Team</h2>
+        <p class="section-subtitle">
+          Final year undergraduate candidates specializing in Information Technology at the Faculty of Computing, Sri
+          Lanka Institute of Information Technology (SLIIT).
+        </p>
+      </section>
+
+      <div class="team-grid">
+
+        <!-- Student 1: Thanujana D.O (Component 4) -->
+        <article class="team-card card-thanujana reveal">
+          <div class="team-card-top">
+            <div class="team-photo-wrap">
+              <img src="images/team_thanujana.jpg" alt="Thanujana D.O" class="team-photo-img">
+            </div>
+            <div class="team-meta-head">
+              <h3>Thanujana D.O</h3>
+              <div class="team-id-badge">ID: IT22148704 &bull; SLIIT Computing</div>
+              <span class="team-role-pill pill-c4">Connectivity, Mesh Intelligence &amp; Compass</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <p class="team-desc">
+              Engineered TrailLink’s foundational connectivity and mesh layer, providing autonomous backend reachability
+              detection, situational peer link intelligence, on-device spatial signal guidance, and bounded packet
+              forwarding across nearby phone links without cellular infrastructure or external hardware.
+            </p>
+            <div class="team-achievement-box">
+              <div class="team-contrib-title">
+                <span>&#9889;</span> Key Contributions &amp; Algorithmic Innovations
+              </div>
+              <ul class="team-contrib-list">
+                <li><strong>Active HTTP Reachability Probe:</strong> 4-state hysteresis state machine (Online, Offline,
+                  Reconnecting, Unstable) eliminating false OS-level Wi-Fi connection assumptions.</li>
+                <li><strong>Composite Link Quality Estimation (LQE):</strong> Deterministic pipeline scoring peer health
+                  (0–100) across five labelled tiers with split-half trend analysis (&plusmn;10 delta threshold).</li>
+                <li><strong>On-Device Network Compass:</strong> Privacy-preserving sensor fusion coupling local GPS with
+                  262 KB HTTP throughput probing for geodesic directional guidance (&plusmn;1&deg; bearing accuracy).
+                </li>
+                <li><strong>Controlled Mesh Relay Engine:</strong> Application-layer relay enforcing allow-lists,
+                  channel scoping, origin exclusion, and TTL/hop-count budgets (max 5 hops) to prevent broadcast storms.
+                </li>
+              </ul>
+              <div class="team-metrics-tags">
+                <span class="team-metric-pill">&#9670; &plusmn;10 LQE Delta</span>
+                <span class="team-metric-pill">&#9670; &plusmn;1&deg; Bearing Guidance</span>
+                <span class="team-metric-pill">&#9670; 4-State Hysteresis</span>
+                <span class="team-metric-pill">&#9670; Max 5-Hop Budget</span>
+                <span class="team-metric-pill">&#9670; 262 KB Probe Engine</span>
+              </div>
+            </div>
+            <div class="team-contacts">
+              <a href="mailto:it22148704@my.sliit.lk" class="contact-icon-btn" title="Email Student">&#9993;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Student 2: Dulsara H G N (Component 1) -->
+        <article class="team-card card-dulsara featured-candidate reveal">
+          <div class="team-card-top">
+            <div class="team-photo-wrap">
+              <img src="images/team_dulsara.jpg" alt="Dulsara H G N" class="team-photo-img">
+            </div>
+            <div class="team-meta-head">
+              <h3>Dulsara H G N</h3>
+              <div class="team-id-badge">ID: IT22544490 &bull; SLIIT Computing</div>
+              <span class="team-role-pill pill-c1">Geospatial Mapping &amp; SOS</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <p class="team-desc">
+              Spearheaded TrailLink’s local-first spatial awareness, vector/raster topographic mapping, priority
+              distress dissemination protocol, and transactional dual-state cloud database synchronization for
+              infrastructure-less expeditions and search-and-rescue operations.
+            </p>
+            <div class="team-achievement-box">
+              <div class="team-contrib-title">
+                <span>&#9889;</span> Key Contributions &amp; Algorithmic Innovations
+              </div>
+              <ul class="team-contrib-list">
+                <li><strong>Unprivileged GNSS Ingestion:</strong> Continuous coordinate telemetry sampling serialized
+                  into compact 512-byte MTU JSON framing operating without Android root permissions.</li>
+                <li><strong>Offline MBTiles Vector Rendering:</strong> Local vector/raster map rendering across 25
+                  km&sup2; wilderness zones coupled with mathematical 3-tier temporal decay
+                  &fnof;<sub>freshness</sub>(&Delta;t) (Fresh &le;5m, Old 5&ndash;15m, Stale &gt;15m).</li>
+                <li><strong>Priority Emergency SOS Preemption:</strong> Out-of-order queue preempting media traffic,
+                  bounded by strict Time-To-Live (TTL=8, &le; 5 hops), split-horizon loop suppression, and duplicate
+                  ledger (<code>processed_offline_packets</code>).</li>
+                <li><strong>Transactional BridgeEngine Reconciliation:</strong> Synchronous relational WAL SQLite
+                  persistence with automated batched cloud reconciliation to MongoDB, guaranteeing zero data loss across
+                  750 empirical trials (sub-850ms multi-wall latency).</li>
+              </ul>
+              <div class="team-metrics-tags">
+                <span class="team-metric-pill">&#9670; 99.5% PDR @ 20m</span>
+                <span class="team-metric-pill">&#9670; &lt; 850 ms SOS Latency</span>
+                <span class="team-metric-pill">&#9670; 3-Tier Freshness Decay</span>
+                <span class="team-metric-pill">&#9670; 0% Data Loss Cloud Sync</span>
+                <span class="team-metric-pill">&#9670; 750 Physical Trials</span>
+              </div>
+            </div>
+            <div class="team-contacts">
+              <a href="mailto:it22544490@my.sliit.lk" class="contact-icon-btn" title="Email Student">&#9993;</a>
+              <a href="docs/SLIIT_INDIVIDUAL_THESIS_NETHULA_DULSARA.docx" class="contact-icon-btn"
+                title="Download Thesis DOCX">&#128196;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Student 3: Pabodhana D M D I (Component 2) -->
+        <article class="team-card card-deshitha reveal">
+          <div class="team-card-top">
+            <div class="team-photo-wrap">
+              <img src="images/team_deshitha.jpg" alt="Pabodhana D M D I" class="team-photo-img">
+            </div>
+            <div class="team-meta-head">
+              <h3>Pabodhana D M D I</h3>
+              <div class="team-id-badge">ID: IT22168290 &bull; SLIIT Computing</div>
+              <span class="team-role-pill pill-c2">Communication Core</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <p class="team-desc">
+              Engineered TrailLink's central transport backbone, providing seamless switching between online cloud APIs
+              and offline P2P mesh messaging with guaranteed local data persistence and delivery reliability.
+            </p>
+            <div class="team-achievement-box">
+              <div class="team-contrib-title">
+                <span>&#9889;</span> Key Contributions &amp; Algorithmic Innovations
+              </div>
+              <ul class="team-contrib-list">
+                <li><strong>Transactional Store-and-Forward Engine:</strong> SQLite-backed resilient outbox manager
+                  guaranteeing zero message loss across unexpected process terminations and transport transitions.</li>
+                <li><strong>Loop-Free Multi-Hop TTL Relaying:</strong> Decentralized hop forwarding protocol with
+                  idempotent sequence filtering achieving 0.00% duplicate loop rate across mesh nodes.</li>
+                <li><strong>SOS Priority Preemption:</strong> Dynamic queue scheduling intercepting routine
+                  conversational buffers for sub-second emergency packet propagation.</li>
+                <li><strong>Empirical Mesh Latency Benchmark:</strong> Validated multi-hop delivery with a sub-390ms
+                  4-hop propagation latency benchmark across physical handset clusters.</li>
+              </ul>
+              <div class="team-metrics-tags">
+                <span class="team-metric-pill">&#9670; Sub-390ms 4-Hop</span>
+                <span class="team-metric-pill">&#9670; 0.00% Loop Rate</span>
+                <span class="team-metric-pill">&#9670; Store-and-Forward</span>
+                <span class="team-metric-pill">&#9670; Zero-Loss Outbox</span>
+              </div>
+            </div>
+            <div class="team-contacts">
+              <a href="mailto:it22168290@my.sliit.lk" class="contact-icon-btn" title="Email Student">&#9993;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Student 4: Vitharana G.G (Component 3) -->
+        <article class="team-card card-vitharana reveal">
+          <div class="team-card-top">
+            <div class="team-photo-wrap">
+              <img src="images/team_vitharana.jpg" alt="Vitharana G.G" class="team-photo-img">
+            </div>
+            <div class="team-meta-head">
+              <h3>Vitharana G.G</h3>
+              <div class="team-id-badge">ID: IT22894038 &bull; SLIIT Computing</div>
+              <span class="team-role-pill pill-c3">Voice and Push-to-Talk (PTT) Communication</span>
+            </div>
+          </div>
+          <div class="team-info">
+            <p class="team-desc">
+              Engineered TrailLink’s voice layer, giving groups validated, replayable voice notes and floor-controlled
+              Live Radio that work online through the cloud and offline over nearby phone links, with cleanup that never
+              drops the group connection.
+            </p>
+            <div class="team-achievement-box">
+              <div class="team-contrib-title">
+                <span>&#9889;</span> Key Contributions &amp; Algorithmic Innovations
+              </div>
+              <ul class="team-contrib-list">
+                <li><strong>Validated Voice-Note Pipeline:</strong> Filters corrupted clips under 650 ms or 128 bytes,
+                  prevents duplicate releases, and marks delivered status strictly upon peer acknowledgment.</li>
+                <li><strong>Serverless PTT Floor Control:</strong> Decentralized token arbitration rule with
+                  deterministic tie-breaking and automatic voice stream muting upon incoming SOS alerts.</li>
+                <li><strong>7-State Live Radio Engine:</strong> Real-time audio streaming pipeline pushing 200 ms PCM
+                  chunks with idempotent session cleanup isolated from the Nearby connection.</li>
+                <li><strong>Payload Budget &amp; Codec Optimization:</strong> Strict 32 KB Nearby packet ceiling
+                  analysis capping single-packet clips at ~24 KB raw audio to prevent fragmentation.</li>
+              </ul>
+              <div class="team-metrics-tags">
+                <span class="team-metric-pill">&#9670; 200ms PCM Streams</span>
+                <span class="team-metric-pill">&#9670; 24 KB Audio Cap</span>
+                <span class="team-metric-pill">&#9670; Deterministic PTT Tie-Break</span>
+                <span class="team-metric-pill">&#9670; 7-State Radio FSM</span>
+                <span class="team-metric-pill">&#9670; Auto SOS Voice Muting</span>
+              </div>
+            </div>
+            <div class="team-contacts">
+              <a href="mailto:it22894038@my.sliit.lk" class="contact-icon-btn" title="Email Student">&#9993;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+
+
+      <!-- Academic Supervisory Panel -->
+      <section class="section-header" style="margin-top: 1rem;">
+        <span class="section-tag">Academic Mentorship &bull; Faculty of Computing</span>
+        <h2 class="section-title">Academic Supervisory Panel</h2>
+        <p class="section-subtitle">
+          Distinguished faculty members providing scholarly critique, theoretical guidance, and academic oversight
+          throughout the research investigation.
+        </p>
+      </section>
+
+      <div class="supervisors-grid">
+        <!-- Supervisor: Mr. Vishan Jayasinghearachchi -->
+        <div class="supervisor-card reveal">
+          <div class="team-photo-wrap" style="width: 88px; height: 88px; border-radius: 20px;">
+            <img src="images/supervisor_vishan.jpg" alt="Mr. Vishan Jayasinghearachchi" class="team-photo-img">
+          </div>
+          <div style="flex: 1;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem; color: var(--apple-black);">Mr. Vishan Jayasinghearachchi</h3>
+            <div style="display: inline-block; color: var(--apple-blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 0.65rem; background: #ecfdf5; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); border: 1px solid #a7f3d0;">Project Supervisor &bull; Lecturer</div>
+            <p style="font-size: 0.9rem; margin: 0 0 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+              Department of Software Engineering, Faculty of Computing<br>
+              Sri Lanka Institute of Information Technology (SLIIT)
+            </p>
+            <a href="mailto:vishan.j@sliit.lk" class="contact-icon-btn" title="Email Supervisor">&#9993;</a>
+          </div>
+        </div>
+
+        <!-- Co-supervisor: Ms. Sasini Hathurusinghe -->
+        <div class="supervisor-card reveal">
+          <div class="team-photo-wrap" style="width: 88px; height: 88px; border-radius: 20px;">
+            <img src="images/supervisor_sasini.jpg" alt="Ms. Sasini Hathurusinghe" class="team-photo-img">
+          </div>
+          <div style="flex: 1;">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.25rem; color: var(--apple-black);">Ms. Sasini Hathurusinghe</h3>
+            <div style="display: inline-block; color: #6366f1; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.65rem; background: #eef2ff; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); border: 1px solid #c7d2fe;">Project Co-supervisor &bull; Lecturer</div>
+            <p style="font-size: 0.9rem; margin: 0 0 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+              Department of Information Technology, Faculty of Computing<br>
+              Sri Lanka Institute of Information Technology (SLIIT)
+            </p>
+            <a href="mailto:sasini.h@sliit.lk" class="contact-icon-btn" title="Email Co-supervisor">&#9993;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Department & University Information -->
+      <section class="academic-card" style="margin-top: 2rem;">
+        <h3 style="margin-bottom: 0.75rem; color: var(--secondary);">&#127979; Department &amp; Academic Institution
+          Details</h3>
+        <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 1rem;">
+          This research project was conceived and executed in partial fulfilment of the requirements for the degree of
+          <strong>Bachelor of Science (Hons) in Information Technology</strong>, specializing in Information Technology,
+          within the Department of Information Technology, Faculty of Computing, Sri Lanka Institute of Information
+          Technology (SLIIT), Malabe, Sri Lanka.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.88rem;">
+          <div style="background: var(--bg-card-alt); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>Degree Program:</strong><br>BSc (Hons) in Information Technology
+          </div>
+          <div style="background: var(--bg-card-alt); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>Module:</strong><br>CDAP (Comprehensive Design &amp; Analysis Project)
+          </div>
+          <div style="background: var(--bg-card-alt); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>Evaluation Cycle:</strong><br>Academic Year 2026
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>TrailLink Research Project</h3>
+        <p>An Infrastructure-Independent Mobile Mesh Collaboration Platform for Remote Expeditions and Search-and-Rescue
+          Missions. SLIIT CDAP 2026.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html?v=3.2">Home</a></li>
+          <li><a href="domain.html?v=3.2">Domain</a></li>
+          <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="presentations.html?v=3.2">Presentations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Supervisors</h4>
+        <ul>
+          <li>Supervisor: Mr. Vishan Jayasinghearachchi</li>
+          <li>Co-supervisor: Ms. Sasini Hathurusinghe</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institute</h4>
+        <p style="font-size: 0.85rem; color: #94a3b8;">
+          Department of Information Technology<br>
+          Faculty of Computing &bull; SLIIT
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div>&copy; 2026 TrailLink Research Group &bull; SLIIT Faculty of Computing.</div>
+        <div>Team &amp; Academic Profiles &bull; Disk &lt; 20 MB Compliant</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3.2"></script>
+</body>
+
+</html>
