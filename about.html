@@ -9,24 +9,6 @@
   <title>About Us | TrailLink Academic Research Portal</title>
   <link rel="stylesheet" href="css/style.css?v=3.3">
   <link rel="icon" type="image/png" href="images/traillink_logo.png">
-  <script>
-    (function() {
-      function clean() {
-        document.querySelectorAll("nav a, footer a").forEach(function(a) {
-          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
-            var li = a.closest("li");
-            if (li) li.remove(); else a.remove();
-          }
-        });
-      }
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", clean);
-      } else {
-        clean();
-      }
-      window.addEventListener("pageshow", clean);
-    })();
-  </script>
 </head>
 
 <body>
@@ -50,6 +32,7 @@
           <li><a href="index.html?v=3.2" class="nav-link">Home</a></li>
           <li><a href="domain.html?v=3.2" class="nav-link">Domain</a></li>
           <li><a href="milestones.html?v=3.2" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html?v=3.2" class="nav-link">Documents</a></li>
           <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
           <li><a href="about.html?v=3.2" class="nav-link active">About Us</a></li>
           <li><a href="contact.html?v=3.2" class="nav-link">Contact Us</a></li>
@@ -86,6 +69,10 @@
           style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.12); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.18);">
           🎓 CDAP Academic Year 2026
         </span>
+        <a href="docs/R26-IT-135_Draft_Thesis.pdf" target="_blank"
+          style="display: inline-flex; align-items: center; gap: 0.4rem; background: var(--primary); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600; color: #ffffff; text-decoration: none; border: 1px solid rgba(255,255,255,0.25);">
+          &#128216; Read Draft Group Thesis (PDF) &nearr;
+        </a>
       </div>
     </div>
   </section>
@@ -199,8 +186,6 @@
             </div>
             <div class="team-contacts">
               <a href="mailto:it22544490@my.sliit.lk" class="contact-icon-btn" title="Email Student">&#9993;</a>
-              <a href="docs/SLIIT_INDIVIDUAL_THESIS_NETHULA_DULSARA.docx" class="contact-icon-btn"
-                title="Download Thesis DOCX">&#128196;</a>
             </div>
           </div>
         </article>
@@ -365,6 +350,28 @@
         </div>
       </section>
 
+      <!-- Final Group Research Thesis Card -->
+      <section class="academic-card" style="margin-top: 2rem; border-left: 4px solid var(--primary);">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <h3 style="margin: 0; color: var(--apple-black);">&#128216; Main Group Research Thesis (Draft)</h3>
+          <span class="notice-badge" style="background: #ecfdf5; color: var(--primary); border-color: #a7f3d0;">Group: R26-IT-135 &bull; 121 Pages</span>
+        </div>
+        <p style="font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 1.25rem;">
+          "TRAILLINK: Hybrid Communication &amp; Safety System" &mdash; Submitted in partial fulfilment of the requirements for the Bachelor of Science (Hons) in Information Technology by the four student researchers under the supervision of Mr. Vishan Jayasinghearachchi and Ms. Sashini Hathurusinghe.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <a href="docs/R26-IT-135_Draft_Thesis.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.88rem; padding: 0.55rem 1.25rem;">
+            &#128065; Read Draft Group Thesis (PDF) &nearr;
+          </a>
+          <a href="docs/R26-IT-135_Draft_Thesis.pdf" download="R26-IT-135_Draft_Thesis.pdf" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.55rem 1.25rem;">
+            &#11015; Download Thesis PDF (2.2 MB)
+          </a>
+          <a href="documents.html?v=3.2" class="btn btn-outline" style="font-size: 0.88rem; padding: 0.55rem 1.25rem;">
+            &#128196; Documents Repository &rarr;
+          </a>
+        </div>
+      </section>
+
     </div>
   </main>
 
@@ -382,6 +389,7 @@
           <li><a href="index.html?v=3.2">Home</a></li>
           <li><a href="domain.html?v=3.2">Domain</a></li>
           <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="documents.html?v=3.2">Documents</a></li>
           <li><a href="presentations.html?v=3.2">Presentations</a></li>
         </ul>
       </div>

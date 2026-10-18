@@ -10,24 +10,6 @@
   <meta http-equiv="Expires" content="0">
   <link rel="stylesheet" href="css/style.css?v=3.3">
   <link rel="icon" type="image/png" href="images/traillink_logo.png">
-  <script>
-    (function() {
-      function clean() {
-        document.querySelectorAll("nav a, footer a").forEach(function(a) {
-          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
-            var li = a.closest("li");
-            if (li) li.remove(); else a.remove();
-          }
-        });
-      }
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", clean);
-      } else {
-        clean();
-      }
-      window.addEventListener("pageshow", clean);
-    })();
-  </script>
 </head>
 <body>
 
@@ -50,6 +32,7 @@
           <li><a href="index.html?v=3.2" class="nav-link">Home</a></li>
           <li><a href="domain.html?v=3.2" class="nav-link">Domain</a></li>
           <li><a href="milestones.html?v=3.2" class="nav-link active">Milestones</a></li>
+          <li><a href="documents.html?v=3.2" class="nav-link">Documents</a></li>
           <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
           <li><a href="about.html?v=3.2" class="nav-link">About Us</a></li>
           <li><a href="contact.html?v=3.2" class="nav-link">Contact Us</a></li>
@@ -182,16 +165,28 @@
         <div class="milestone-body">
           <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--secondary);">Final Assessment &amp; Research Thesis Submission</h3>
           <p>
-            The comprehensive culmination of the research project. Encompasses the full empirical benchmarking of 750 physical trials across Open Area, Forest Canopy, and Multi-Wall Classroom environments, complete software system integration, and submission of the individual thesis dissertations, peer-reviewed research paper, and group final document.
+            The comprehensive culmination of the research project. Encompasses the full empirical benchmarking of 750 physical trials across Open Area, Forest Canopy, and Multi-Wall Classroom environments, complete software system integration, and submission of the peer-reviewed research paper and group final thesis document.
           </p>
           <div style="background: var(--bg-card-alt); border-radius: var(--radius-md); padding: 1rem 1.25rem; margin-top: 1rem;">
             <strong style="color: var(--secondary); font-size: 0.9rem;">Key Deliverables &amp; Evaluation Criteria:</strong>
             <ul style="padding-left: 1.25rem; margin-top: 0.5rem; font-size: 0.88rem; color: var(--text-muted);">
-              <li>Submission of Individual Research Thesis (Nethula Dulsara - 77 Pages, 9 Figures, 8 Tables).</li>
+              <li>Submission of Draft Group Research Thesis (121 Pages, 12 Chapters, 4 Subsystems).</li>
               <li>Peer-reviewed Research Paper manuscript (IEEE conference format, 6 pages).</li>
-              <li>Final Group Comprehensive Research Report integrating all 4 subsystems.</li>
+              <li>Final Group Comprehensive Research Report integrating all 4 subsystems (121 Pages).</li>
               <li>Complete source code repository with automated unit, integration, and UI tests.</li>
             </ul>
+          </div>
+
+          <div class="milestone-actions" style="margin-top: 1.25rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="docs/R26-IT-135_Draft_Thesis.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.1rem;">
+              &#128216; Read Draft Group Thesis (PDF) &nearr;
+            </a>
+            <a href="docs/R26-IT-135_Draft_Thesis.pdf" download="R26-IT-135_Draft_Thesis.pdf" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1.1rem;">
+              &#11015; Download Thesis PDF (2.2 MB)
+            </a>
+            <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="btn btn-outline" style="font-size: 0.85rem; padding: 0.5rem 1.1rem;">
+              &#128196; View Research Paper (PDF) &nearr;
+            </a>
           </div>
 
         </div>
@@ -239,6 +234,7 @@
           <li><a href="index.html?v=3.2">Home</a></li>
           <li><a href="domain.html?v=3.2">Domain</a></li>
           <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="documents.html?v=3.2">Documents</a></li>
           <li><a href="presentations.html?v=3.2">Presentations</a></li>
         </ul>
       </div>

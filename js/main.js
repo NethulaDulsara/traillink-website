@@ -11,17 +11,10 @@
  */
 
 function removeLegacyDocumentsNav() {
-  document.querySelectorAll('nav a, footer a').forEach(a => {
-    if (a.textContent.trim().toLowerCase() === 'documents' || (a.getAttribute('href') && a.getAttribute('href').includes('documents.html'))) {
-      const li = a.closest('li');
-      if (li) li.remove();
-      else a.remove();
-    }
-  });
+  // Retained for backwards compatibility; documents.html is now active
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  removeLegacyDocumentsNav();
   initScrollProgress();
   initScrollReveals();
   initHeaderGlass();
@@ -396,11 +389,11 @@ function initSlideViewer() {
       <div class="slide-card-preview">
         <span class="notice-badge" style="margin-bottom: 1rem; display: inline-block;">${slide.title}</span>
         <h2 style="color: #ffffff; font-size: 1.75rem; margin-bottom: 0.5rem;">${slide.subtitle}</h2>
-        <p style="color: #38bdf8; font-weight: 600; margin-bottom: 1.5rem; font-size: 0.95rem;">TrailLink Research Project | SLIIT CDAP 2026</p>
+        <p style="color: #34d399; font-weight: 600; margin-bottom: 1.5rem; font-size: 0.95rem;">TrailLink Research Project | SLIIT CDAP 2026</p>
         <ul style="text-align: left; list-style: none; padding: 0;">
           ${slide.points.map(pt => `
             <li style="color: #e2e8f0; font-size: 1rem; margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 0.75rem;">
-              <span style="color: #38bdf8; font-weight: bold;">▸</span> ${pt}
+              <span style="color: #34d399; font-weight: bold;">▸</span> ${pt}
             </li>
           `).join('')}
         </ul>

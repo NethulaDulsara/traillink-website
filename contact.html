@@ -9,24 +9,6 @@
   <title>Contact Us | TrailLink Academic Research Portal</title>
   <link rel="stylesheet" href="css/style.css?v=3.3">
   <link rel="icon" type="image/png" href="images/traillink_logo.png">
-  <script>
-    (function() {
-      function clean() {
-        document.querySelectorAll("nav a, footer a").forEach(function(a) {
-          if (a.textContent.trim().toLowerCase() === "documents" || (a.getAttribute("href") && a.getAttribute("href").indexOf("documents.html") !== -1)) {
-            var li = a.closest("li");
-            if (li) li.remove(); else a.remove();
-          }
-        });
-      }
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", clean);
-      } else {
-        clean();
-      }
-      window.addEventListener("pageshow", clean);
-    })();
-  </script>
 </head>
 
 <body>
@@ -50,6 +32,7 @@
           <li><a href="index.html?v=3.2" class="nav-link">Home</a></li>
           <li><a href="domain.html?v=3.2" class="nav-link">Domain</a></li>
           <li><a href="milestones.html?v=3.2" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html?v=3.2" class="nav-link">Documents</a></li>
           <li><a href="presentations.html?v=3.2" class="nav-link">Presentations</a></li>
           <li><a href="about.html?v=3.2" class="nav-link">About Us</a></li>
           <li><a href="contact.html?v=3.2" class="nav-link active">Contact Us</a></li>
@@ -148,6 +131,7 @@
           <li><a href="index.html?v=3.2">Home</a></li>
           <li><a href="domain.html?v=3.2">Domain</a></li>
           <li><a href="milestones.html?v=3.2">Milestones</a></li>
+          <li><a href="documents.html?v=3.2">Documents</a></li>
           <li><a href="presentations.html?v=3.2">Presentations</a></li>
         </ul>
       </div>
