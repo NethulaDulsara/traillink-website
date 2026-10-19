@@ -543,7 +543,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: opacity 0.4s var(--ease-apple);
+  transition: opacity 0.4s var(--ease-apple), transform 0.4s var(--ease-apple);
 }
 
 .screen-glare-overlay {

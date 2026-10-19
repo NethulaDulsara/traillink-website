@@ -128,9 +128,21 @@ const showcaseData = {
       "Bidirectional peer acknowledgments (sos_ack) and BridgeEngine cloud reconciliation"
     ]
   },
-  chat: {
+  text: {
+    title: "Offline Store-and-Forward Text Messaging",
+    lead: "Component 2 • Delay-Tolerant Network (DTN) Gossip Protocol",
+    desc: "Facilitates reliable asynchronous peer-to-peer text communication across disconnected mesh partitions. Features local transactional SQLite outbox queues, cryptographic channel isolation, and multi-hop epidemic gossip relaying with zero internet dependency.",
+    img: "images/app_screen_offline_chat.jpg",
+    features: [
+      "Trip-scoped cryptographic channel isolation (e.g. channel TL-OFF-QG4J)",
+      "Persistent SQLite outbox queue caching unsent messages during zero-peer isolation",
+      "End-to-end cryptographic delivery status indicators (Sent &rarr; Delivered &rarr; Acknowledged)",
+      "High-priority SOS preemption: automatic conversational queue yielding on distress alerts"
+    ]
+  },
+  voice: {
     title: "Dual-Pipeline Voice Radio & Push-to-Talk (PTT)",
-    lead: "Components 2 & 3 • Delay-Tolerant Text & Jitter-Buffered Voice Radio",
+    lead: "Component 3 • Delay-Tolerant Voice & Jitter-Buffered Radio",
     desc: "Enables natural conversational communications over ad-hoc Wi-Fi Direct and BLE mesh links without mobile cellular infrastructure, supporting both compressed voice notes and live PCM-16 streaming.",
     img: "images/app_screen_chat_ptt.jpg",
     features: [
@@ -138,6 +150,18 @@ const showcaseData = {
       "Asynchronous compressed AAC-LC voice memos for low-bandwidth links",
       "Adaptive Splay-Tree Jitter Buffer eliminating acoustic playback jitter",
       "SOS emergency queue yielding: instant audio muting on distress alerts"
+    ]
+  },
+  chat: {
+    title: "Offline Store-and-Forward Text Messaging",
+    lead: "Component 2 • Delay-Tolerant Network (DTN) Gossip Protocol",
+    desc: "Facilitates reliable asynchronous peer-to-peer text communication across disconnected mesh partitions. Features local transactional SQLite outbox queues, cryptographic channel isolation, and multi-hop epidemic gossip relaying with zero internet dependency.",
+    img: "images/app_screen_offline_chat.jpg",
+    features: [
+      "Trip-scoped cryptographic channel isolation (e.g. channel TL-OFF-QG4J)",
+      "Persistent SQLite outbox queue caching unsent messages during zero-peer isolation",
+      "End-to-end cryptographic delivery status indicators (Sent &rarr; Delivered &rarr; Acknowledged)",
+      "High-priority SOS preemption: automatic conversational queue yielding on distress alerts"
     ]
   },
   link: {
