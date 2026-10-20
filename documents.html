@@ -66,6 +66,9 @@
           <a href="docs/R26-IT-135_Draft_Thesis.pdf" target="_blank" class="quick-pill-btn primary">
             &#128216; Draft Group Thesis (PDF) &nearr;
           </a>
+          <a href="#individualThesisFolder" class="quick-pill-btn" onclick="openAndScrollToThesisFolder(event)" style="border-color: #3b82f6; color: #2563eb; font-weight: 700;">
+            &#128194; Individual Theses (4) &darr;
+          </a>
           <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="quick-pill-btn">
             &#128196; Research Paper (PDF) &nearr;
           </a>
@@ -155,6 +158,140 @@
           <a href="docs/R26-IT-135_Draft_Thesis.pdf" download="R26-IT-135_Draft_Thesis.pdf" class="btn btn-outline" style="font-size: 0.95rem; padding: 0.65rem 1.6rem;">
             &#11015; Download Draft Thesis PDF (2.2 MB)
           </a>
+        </div>
+      </article>
+
+      <!-- Individual Research Thesis Reports Card Folder (Slide 12: 4 Docs with the Main) -->
+      <article class="doc-card folder-card folder-thesis" id="individualThesisFolder" onclick="toggleThesisFolder(event)">
+        <div class="folder-card-top">
+          <div class="folder-icon-wrap">
+            &#128194;
+          </div>
+          <span class="folder-badge-pill">
+            <span class="pulse-dot"></span> 4 Individual Theses &bull; PDF
+          </span>
+        </div>
+
+        <h3 class="folder-card-title">Individual Research Thesis Reports</h3>
+
+        <div class="folder-card-meta">
+          <strong>Academic Deliverable:</strong> Individual Final Theses (Slide 12: "4 docs with the main")<br>
+          <strong>SLIIT CDAP 2026:</strong> Group R26-IT-135 &bull; 4 Specialization Components
+        </div>
+
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.85rem;">
+          Official individual undergraduate research theses submitted in partial fulfilment of the requirements for B.Sc. (Hons) in Information Technology &amp; Software Engineering, documenting each member's core algorithmic design, implementation, and empirical validation.
+        </p>
+
+        <div class="folder-member-previews">
+          <span class="member-chip">THANUJANA D O (IT22148704)</span>
+          <span class="member-chip">PABODHANA D M D I (IT22168290)</span>
+          <span class="member-chip">DULSARA H G N (IT22544490)</span>
+          <span class="member-chip">VITHARANA G G (IT22894038)</span>
+        </div>
+
+        <div class="folder-toggle-bar">
+          <span id="thesisFolderToggleLabel">&#128194; Click to Open Folder (4 Individual Theses)</span>
+          <span class="toggle-arrow">&#9662;</span>
+        </div>
+
+        <!-- Inside that card, when clicked, show all 4 documents -->
+        <div class="folder-tray" id="thesisFolderTray" onclick="event.stopPropagation()">
+          <div class="folder-tray-header">
+            <div>
+              <h4 style="color: #1d4ed8;">&#128194; Individual Research Thesis Reports (4 Members)</h4>
+              <p class="folder-tray-sub">Complete individual dissertations with literature review, methodology, implementation, empirical field results, and validation</p>
+            </div>
+            <button type="button" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.35rem 0.85rem;" onclick="closeThesisFolder(event)">
+              &#9652; Collapse Folder
+            </button>
+          </div>
+
+          <div class="folder-members-grid">
+            <!-- 1st thesis: THANUJANA D O -->
+            <div class="member-report-card">
+              <div class="member-card-badge-row">
+                <span class="member-order-badge">Thesis 01</span>
+                <span class="member-id-pill">IT22148704</span>
+              </div>
+              <div class="member-name">THANUJANA D O</div>
+              <div class="member-topic">Communication Mesh Intelligence &amp; Compass</div>
+              <div class="member-desc">
+                Nearby Connections P2P clustering, composite link-quality estimation (RSSI, ACK RTT, PRR), split-half trend analysis, and Network Compass geodesic guidance.
+              </div>
+              <div class="member-card-actions">
+                <a href="docs/IT22148704_DRAFT.pdf" target="_blank" class="btn-report-view">
+                  &#128065; Read Thesis (PDF) &nearr;
+                </a>
+                <a href="docs/IT22148704_DRAFT.pdf" download="IT22148704_DRAFT.pdf" class="btn-report-download">
+                  &#11015; Download PDF (1.5 MB)
+                </a>
+              </div>
+            </div>
+
+            <!-- 2nd thesis: PABODHANA D M D I -->
+            <div class="member-report-card">
+              <div class="member-card-badge-row">
+                <span class="member-order-badge">Thesis 02</span>
+                <span class="member-id-pill">IT22168290</span>
+              </div>
+              <div class="member-name">PABODHANA D M D I</div>
+              <div class="member-topic">Communication Core (Hybrid Transport &amp; Multi-Hop)</div>
+              <div class="member-desc">
+                Unified message transport, SQLite transactional store-and-forward queue, priority preemption, loop-free multi-hop relay with TTL hop-budget, and cloud sync.
+              </div>
+              <div class="member-card-actions">
+                <a href="docs/IT22168290_DRAFT.pdf" target="_blank" class="btn-report-view">
+                  &#128065; Read Thesis (PDF) &nearr;
+                </a>
+                <a href="docs/IT22168290_DRAFT.pdf" download="IT22168290_DRAFT.pdf" class="btn-report-download">
+                  &#11015; Download PDF (631 KB)
+                </a>
+              </div>
+            </div>
+
+            <!-- 3rd thesis: DULSARA H G N -->
+            <div class="member-report-card">
+              <div class="member-card-badge-row">
+                <span class="member-order-badge">Thesis 03</span>
+                <span class="member-id-pill">IT22544490</span>
+              </div>
+              <div class="member-name">DULSARA H G N</div>
+              <div class="member-topic">Offline Spatial Awareness, Mapping &amp; Emergency SOS</div>
+              <div class="member-desc">
+                Local-first GNSS spatial pipeline, offline MBTiles vector/raster mapping with dynamic temporal freshness decay, out-of-order SOS preemption, and BridgeEngine MongoDB reconciliation.
+              </div>
+              <div class="member-card-actions">
+                <a href="docs/IT22544490_DRAFT.pdf" target="_blank" class="btn-report-view">
+                  &#128065; Read Thesis (PDF) &nearr;
+                </a>
+                <a href="docs/IT22544490_DRAFT.pdf" download="IT22544490_DRAFT.pdf" class="btn-report-download">
+                  &#11015; Download PDF (3.8 MB)
+                </a>
+              </div>
+            </div>
+
+            <!-- 4th thesis: VITHARANA G G -->
+            <div class="member-report-card">
+              <div class="member-card-badge-row">
+                <span class="member-order-badge">Thesis 04</span>
+                <span class="member-id-pill">IT22894038</span>
+              </div>
+              <div class="member-name">VITHARANA G G</div>
+              <div class="member-topic">Voice &amp; PTT / Delay-Tolerant Message Persistence</div>
+              <div class="member-desc">
+                Store-carry-forward persistence on consumer Android, crash-safe SQLite WAL, 3-tier TTL lifecycle management (24h/6h/2h), 3s/12s BLE duty cycle scanner, and audio streaming.
+              </div>
+              <div class="member-card-actions">
+                <a href="docs/IT22894038_DRAFT.pdf" target="_blank" class="btn-report-view">
+                  &#128065; Read Thesis (PDF) &nearr;
+                </a>
+                <a href="docs/IT22894038_DRAFT.pdf" download="IT22894038_DRAFT.pdf" class="btn-report-download">
+                  &#11015; Download PDF (2.0 MB)
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </article>
 

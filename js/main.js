@@ -581,3 +581,47 @@ function openAndScrollToProposalFolder(e) {
   }
 }
 
+/* -----------------------------------------------------------------------------
+ * 12. Individual Research Thesis Reports - Interactive Folder Card Logic
+ * -------------------------------------------------------------------------- */
+function toggleThesisFolder(e) {
+  if (e && (e.target.closest('a') || (e.target.closest('button') && !e.target.closest('.folder-toggle-bar')))) {
+    return;
+  }
+  
+  const folder = document.getElementById('individualThesisFolder');
+  const label = document.getElementById('thesisFolderToggleLabel');
+  if (!folder) return;
+
+  const isOpen = folder.classList.toggle('is-open');
+  if (label) {
+    label.innerHTML = isOpen ? '&#128194; Close Folder' : '&#128194; Click to Open Folder (4 Individual Theses)';
+  }
+}
+
+function closeThesisFolder(e) {
+  if (e) e.stopPropagation();
+  const folder = document.getElementById('individualThesisFolder');
+  const label = document.getElementById('thesisFolderToggleLabel');
+  if (folder) {
+    folder.classList.remove('is-open');
+    if (label) {
+      label.innerHTML = '&#128194; Click to Open Folder (4 Individual Theses)';
+    }
+  }
+}
+
+function openAndScrollToThesisFolder(e) {
+  if (e) e.preventDefault();
+  const folder = document.getElementById('individualThesisFolder');
+  const label = document.getElementById('thesisFolderToggleLabel');
+  if (folder) {
+    folder.classList.add('is-open');
+    if (label) {
+      label.innerHTML = '&#128194; Close Folder';
+    }
+    folder.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+
