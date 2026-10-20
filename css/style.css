@@ -323,6 +323,40 @@ a:hover {
   box-shadow: 0 4px 14px rgba(14, 56, 44, 0.35);
 }
 
+.nav-link-commercial {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.25rem;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.12);
+}
+
+.nav-link-commercial:hover {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  border-color: #10b981;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+
+.nav-link-commercial .play-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: pulse-ring 1.8s infinite;
+}
+
+.nav-link-commercial:hover .play-dot {
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff;
+}
+
 .mobile-toggle {
   display: none;
   background: none;

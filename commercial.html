@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailLink Official 30-Second Commercial | Cinematic Launch Video</title>
+  <link rel="stylesheet" href="css/style.css?v=3.1">
+  <link rel="icon" type="image/png" href="images/traillink_logo.png">
+  <style>
+    :root {
+      --com-bg: #030708;
+      --com-emerald: #10b981;
+      --com-mint: #34d399;
+      --com-danger: #ef4444;
+      --com-cyan: #06b6d4;
+    }
+
+    body {
+      background: var(--com-bg);
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Video Studio Header */
+    .studio-bar {
+      background: rgba(10, 20, 18, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .studio-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .studio-logo img {
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    .studio-badge {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid #10b981;
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .studio-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .studio-btn {
+      background: #10b981;
+      color: #042f24;
+      border: none;
+      font-weight: 700;
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .studio-btn:hover {
+      background: #34d399;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+    }
+
+    .studio-btn-outline {
+      background: transparent;
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .studio-btn-outline:hover {
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    /* Cinematic Theater Wrapper */
+    .theater-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .screen-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 25px 80px -15px rgba(0, 0, 0, 0.9), 0 0 50px rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      perspective: 1200px;
+    }
+
+    /* Ambient Background Atmosphere */
+    .cinematic-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, #064e3b 0%, #031410 40%, #000000 100%);
+      transition: background 0.8s ease;
+      z-index: 1;
+    }
+
+    .cinematic-bg.alert-mode {
+      background: radial-gradient(circle at 50% 50%, #7f1d1d 0%, #350909 50%, #000000 100%);
+    }
+
+    /* 3D Mesh Particle Field */
+    .mesh-grid {
+      position: absolute;
+      inset: -50%;
+      background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      transform: rotateX(65deg) translateY(-20%);
+      transform-origin: center;
+      animation: gridDrift 20s linear infinite;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.5;
+    }
+
+    @keyframes gridDrift {
+      0% { transform: rotateX(65deg) translateY(0); }
+      100% { transform: rotateX(65deg) translateY(40px); }
+    }
+
+    /* Cinematic Light Rays / Vignette */
+    .cinematic-vignette {
+      position: absolute;
+      inset: 0;
+      box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* 3D Phone Stage */
+    .phone-stage-3d {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transform-style: preserve-3d;
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Titanium Phone Mockup */
+    .phone-hardware {
+      width: 250px;
+      height: 520px;
+      background: #0f172a;
+      border-radius: 46px;
+      border: 4px solid #2d3748;
+      box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.8),
+        0 0 40px rgba(16, 185, 129, 0.2),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg) rotateX(0deg) scale(1);
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s ease;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 18px;
+      background: #000;
+      border-radius: 20px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .notch-camera {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #092c20;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .phone-screen-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Glass Reflection */
+    .phone-hardware::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.05) 20%,
+        transparent 50%
+      );
+      transform: skewX(-25deg);
+      pointer-events: none;
+      z-index: 25;
+      animation: phoneGlint 6s infinite ease-in-out;
+    }
+
+    @keyframes phoneGlint {
+      0%, 80% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    /* Kinetic Typography Overlay */
+    .kinetic-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      pointer-events: none;
+      padding: 0 4rem;
+    }
+
+    .kinetic-tag {
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: #34d399;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      text-shadow: 0 0 12px rgba(52, 211, 153, 0.6);
+      transition: all 0.4s ease;
+    }
+
+    .kinetic-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      text-transform: uppercase;
+      max-width: 600px;
+      margin: 0;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .kinetic-title span.highlight-green {
+      color: #10b981;
+      text-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+    }
+
+    .kinetic-title span.highlight-red {
+      color: #ef4444;
+      text-shadow: 0 0 30px rgba(239, 68, 68, 0.8);
+    }
+
+    .kinetic-subtitle {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-top: 1rem;
+      max-width: 500px;
+      line-height: 1.4;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    /* HUD Metrics Overlay */
+    .hud-overlay {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 0.75rem 1.25rem;
+      z-index: 25;
+      display: flex;
+      gap: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .hud-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hud-label {
+      color: #94a3b8;
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hud-value {
+      color: #34d399;
+      font-weight: 700;
+    }
+
+    /* Video Player Scrub Bar */
+    .player-controls {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #10b981;
+      border: none;
+      color: #042f24;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .play-btn:hover {
+      background: #34d399;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+    }
+
+    .timeline-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .timeline-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .timeline-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #10b981, #34d399);
+      border-radius: 999px;
+      transition: width 0.05s linear;
+    }
+
+    .timeline-markers {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .scene-jump-pills {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .scene-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .scene-pill:hover, .scene-pill.active {
+      background: #10b981;
+      color: #042f24;
+      border-color: #10b981;
+    }
+
+    .audio-toggle-btn {
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .audio-toggle-btn:hover {
+      border-color: #10b981;
+      color: #34d399;
+    }
+
+    /* Production Package Tabs & Script Section */
+    .production-guide {
+      margin-top: 3.5rem;
+      background: #091210;
+      border-radius: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      padding: 2.5rem;
+    }
+
+    .production-header {
+      margin-bottom: 2rem;
+    }
+
+    .production-header h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .production-header p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    .script-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .script-table th {
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+      text-align: left;
+      padding: 0.9rem 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .script-table td {
+      padding: 1.1rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .badge-time {
+      background: #10b981;
+      color: #042f24;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      display: inline-block;
+    }
+
+    .sfx-pill {
+      background: rgba(6, 182, 212, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    /* Dynamic Camera & Motion Classes */
+    .cam-center {
+      transform: rotateY(0deg) rotateX(0deg) translateX(0) scale(1);
+    }
+
+    .cam-left-hero {
+      transform: rotateY(-18deg) rotateX(6deg) translateX(180px) scale(1.08);
+    }
+
+    .cam-right-hero {
+      transform: rotateY(18deg) rotateX(-4deg) translateX(-180px) scale(1.08);
+    }
+
+    .cam-tilt-down {
+      transform: rotateX(24deg) translateY(-20px) scale(1.15);
+    }
+
+    .cam-zoom-in {
+      transform: scale(1.3) translateY(30px);
+    }
+
+    .cam-sos-panic {
+      transform: rotateY(0deg) rotateX(10deg) scale(1.18);
+      animation: phoneShake 0.6s infinite ease-in-out;
+    }
+
+    @keyframes phoneShake {
+      0%, 100% { transform: rotateY(0deg) rotateX(10deg) scale(1.18) translateX(0); }
+      25% { transform: rotateY(-2deg) rotateX(8deg) scale(1.18) translateX(-4px); }
+      75% { transform: rotateY(2deg) rotateX(12deg) scale(1.18) translateX(4px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Studio Bar -->
+  <header class="studio-bar">
+    <a href="index.html" class="studio-logo">
+      <img src="images/traillink_logo.png" alt="TrailLink Logo">
+      <div>
+        <div style="font-weight: 800; font-size: 1.1rem; line-height: 1;">TrailLink Commercial Studio</div>
+        <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 2px;">30-Second 4K Broadcast Commercial</div>
+      </div>
+    </a>
+    <div class="studio-actions">
+      <span class="studio-badge">4K 60FPS Commercial</span>
+      <button id="toggleAudioBtn" class="audio-toggle-btn">
+        <span id="audioIcon">&#128266;</span> Cinematic Audio: ON
+      </button>
+      <a href="index.html" class="studio-btn studio-btn-outline">&larr; Back to Portal</a>
+      <button id="recordTipsBtn" class="studio-btn">Export &amp; Record Tips</button>
+    </div>
+  </header>
+
+  <!-- Theater Stage Container -->
+  <main class="theater-container">
+    <div class="screen-stage" id="screenStage">
+      <!-- Ambient Background -->
+      <div class="cinematic-bg" id="cinematicBg"></div>
+      <div class="mesh-grid"></div>
+      <div class="cinematic-vignette"></div>
+
+      <!-- Real-Time HUD Metrics -->
+      <div class="hud-overlay">
+        <div class="hud-item">
+          <span class="hud-label">Timecode</span>
+          <span class="hud-value" id="hudTime">00:00:00</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Scene</span>
+          <span class="hud-value" id="hudScene">01 &bull; HOOK</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Mesh Frequency</span>
+          <span class="hud-value" id="hudFreq">2.4 GHz P2P</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Cellular Status</span>
+          <span class="hud-value" style="color: #ef4444;" id="hudSignal">0 BARS (OFF-GRID)</span>
+        </div>
+      </div>
+
+      <!-- Kinetic Typography Layer -->
+      <div class="kinetic-layer" id="kineticLayer">
+        <div class="kinetic-tag" id="kineticTag">EMERGENCY REALITY</div>
+        <h1 class="kinetic-title" id="kineticTitle">NO CELL TOWER.<br><span class="highlight-red">NO SATELLITE.</span></h1>
+        <p class="kinetic-subtitle" id="kineticSubtitle">When disaster strikes in remote wilderness, conventional networks collapse to zero.</p>
+      </div>
+
+      <!-- 3D Phone Stage With Real App Screenshots -->
+      <div class="phone-stage-3d" id="phoneStage3D">
+        <div class="phone-hardware cam-center" id="phoneHardware">
+          <div class="phone-notch">
+            <div class="notch-camera"></div>
+          </div>
+          <img 
+            id="phoneScreenImg" 
+            class="phone-screen-img" 
+            src="images/app_screen_home.jpg" 
+            alt="Real TrailLink Mobile App Interface"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Playback & Timeline Controls -->
+    <div class="player-controls">
+      <button class="play-btn" id="playBtn" aria-label="Play/Pause Commercial">&#9658;</button>
+      
+      <div class="timeline-wrapper">
+        <div class="timeline-bar-bg" id="timelineBar">
+          <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+        <div class="timeline-markers">
+          <span id="currentTime">00:00</span>
+          <span>00:05 (Hook)</span>
+          <span>00:10 (Reveal)</span>
+          <span>00:15 (Maps)</span>
+          <span>00:20 (PTT Voice)</span>
+          <span>00:25 (SOS Panic)</span>
+          <span>00:30 (Climax)</span>
+        </div>
+      </div>
+
+      <!-- Quick Scene Jump Pills -->
+      <div class="scene-jump-pills">
+        <button class="scene-pill active" onclick="jumpTo(0)">01. Hook</button>
+        <button class="scene-pill" onclick="jumpTo(5)">02. Reveal</button>
+        <button class="scene-pill" onclick="jumpTo(10)">03. Maps</button>
+        <button class="scene-pill" onclick="jumpTo(15)">04. PTT Radio</button>
+        <button class="scene-pill" onclick="jumpTo(20)">05. SOS Beacon</button>
+        <button class="scene-pill" onclick="jumpTo(25)">06. Finale</button>
+      </div>
+    </div>
+
+    <!-- Production Guide & Frame-by-Frame Commercial Script -->
+    <section class="production-guide" id="productionGuide">
+      <div class="production-header">
+        <h2>Official 30-Second Commercial Master Production Breakdown</h2>
+        <p>Complete frame-by-frame storyboard, voiceover narration script, camera physics, and sound design architecture ready for Adobe Premiere Pro, After Effects, DaVinci Resolve, or CapCut.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="script-table">
+          <thead>
+            <tr>
+              <th style="width: 85px;">Time</th>
+              <th style="width: 140px;">Scene &amp; Visual Angle</th>
+              <th style="width: 190px;">Real App UI Shown</th>
+              <th style="width: 260px;">Kinetic Motion Typography</th>
+              <th>Voiceover Script (VO) &amp; Sound FX (SFX)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-time">00:00 - 00:05</span></td>
+              <td><strong>Scene 1: The Off-Grid Void</strong><br>Dark atmospheric mist. Cinematic mountain contour. Subterranean drone rising.</td>
+              <td><em>Silhouette &amp; No Signal Indicator</em></td>
+              <td><strong>NO CELL TOWER.<br><span style="color: #ef4444;">NO SATELLITE.</span><br>ZERO INFRASTRUCTURE.</strong></td>
+              <td>
+                <strong>VO:</strong> <em>"When you step beyond civilization... or catastrophe wipes the grid... your lifeline vanishes."</em><br>
+                <span class="sfx-pill">SFX: Sub Bass Drop (BRAAM)</span>
+                <span class="sfx-pill">Wind Ambience</span>
+                <span class="sfx-pill">Static Glitch</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge-time">00:05 - 00:10</span></td>
+              <td><strong>Scene 2: The Breakthrough</strong><br>3D Titanium phone glides from darkness into emerald lens flare. P2P cluster nodes form in 3D.</td>
+              <td><strong>Trip Home Portal</strong><br><code>app_screen_home.jpg</code><br><em>"Welcome, Okitha" &bull; Trip TL-OFF-QG4J &bull; 100% Offline</em></td>
+              <td><strong>MEET TRAILLINK.<br><span style="color: #10b981;">THE LIVING MESH.</span></strong></td>
+              <td>
+                <strong>VO:</strong> <em>"Meet TrailLink. Unlocking consumer smartphones into an unprivileged, multi-hop mesh network."</em><br>
+                <span class="sfx-pill">SFX: Electrical Pulse Swell</span>
+                <span class="sfx-pill">Digital Node Lock Chime</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge-time">00:10 - 00:15</span></td>
+              <td><strong>Scene 3: Spatial Cartography</strong><br>Camera swoops down at a 30° dynamic angle. Vector contours illuminate.</td>
+              <td><strong>Offline Vector Map</strong><br><code>app_screen_map.jpg</code><br><em>Pittugala terrain &bull; GPS pin &bull; Teammate locations</em></td>
+              <td><strong>OFFLINE VECTOR MAPS.<br><span style="color: #06b6d4;">ZERO MEGABYTES NEEDED.</span></strong></td>
+              <td>
+                <strong>VO:</strong> <em>"Navigate untracked gorges with pre-rendered MBTiles vector maps and live teammate GPS tracking."</em><br>
+                <span class="sfx-pill">SFX: Satellite Lock Chirp</span>
+                <span class="sfx-pill">HUD Zoom Whoosh</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge-time">00:15 - 00:20</span></td>
+              <td><strong>Scene 4: Tactical Voice Radio</strong><br>Extreme macro close-up. Glowing purple mesh radar button pulses under thumb.</td>
+              <td><strong>Dual-Pipeline Radio</strong><br><code>app_screen_chat_ptt.jpg</code><br><em>"Hold to Stream" Live Radio &bull; PCM Audio Notes</em></td>
+              <td><strong>PUSH-TO-TALK.<br><span style="color: #a855f7;">LIVE MESH STREAMING.</span></strong></td>
+              <td>
+                <strong>VO:</strong> <em>"Instantly stream voice radio over Wi-Fi Direct sockets, or relay store-and-forward voice notes across miles."</em><br>
+                <span class="sfx-pill">SFX: Tactical Radio Squelch</span>
+                <span class="sfx-pill">Audio Waveform Tick</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge-time">00:20 - 00:25</span></td>
+              <td><strong>Scene 5: High-Priority Emergency</strong><br>Lighting drops to deep crisis crimson. Red beacon ripples out across screen.</td>
+              <td><strong>Emergency SOS &amp; Compass</strong><br><code>app_screen_sos.jpg</code> &amp; <code>app_screen_compass.jpg</code><br><em>Red Panic Button &bull; Direction Finder</em></td>
+              <td><strong>ONE-TOUCH SOS.<br><span style="color: #ef4444;">OUT-OF-ORDER PRIORITY.</span></strong></td>
+              <td>
+                <strong>VO:</strong> <em>"One tap triggers high-priority SOS telemetry that overrides mesh traffic and guides rescuers to your exact coordinates."</em><br>
+                <span class="sfx-pill">SFX: Heartbeat Thump</span>
+                <span class="sfx-pill">Emergency Warning Siren</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="badge-time">00:25 - 00:30</span></td>
+              <td><strong>Scene 6: The Mesh Revolution</strong><br>Devices fan out into constellation. TrailLink emerald logo ignites center-stage.</td>
+              <td><strong>Global Constellation</strong><br><em>TrailLink Logo + SLIIT CDAP Research Stamp</em></td>
+              <td><strong>NEVER WALK ALONE.<br><span style="color: #10b981;">TRAILLINK.</span></strong></td>
+              <td>
+                <strong>VO:</strong> <em>"Never walk alone. TrailLink. The mobile mesh revolution is here."</em><br>
+                <span class="sfx-pill">SFX: Majestic Orchestral Impact</span>
+                <span class="sfx-pill">Laser Sweep &amp; Outro Shimmer</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Embedded Sound Synthesis Engine & Cinematic Timeline Driver -->
+  <script>
+    const TOTAL_DURATION = 30; // 30 Seconds
+    let currentTime = 0;
+    let isPlaying = false;
+    let animationInterval = null;
+    let audioEnabled = true;
+
+    // Web Audio Synthesizer Context
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // Audio SFX Synthesizers
+    function playBassBraam() {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(95, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(32, ctx.currentTime + 1.6);
+        gain.gain.setValueAtTime(0.4, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.8);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 1.8);
+      } catch(e) {}
+    }
+
+    function playTechChime() {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(1046.50, ctx.currentTime + 0.3); // C6
+        gain.gain.setValueAtTime(0.25, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.5);
+      } catch(e) {}
+    }
+
+    function playRadioSquelch() {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(800, ctx.currentTime);
+        osc.frequency.setValueAtTime(1200, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.2);
+      } catch(e) {}
+    }
+
+    function playSosAlert() {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(880, ctx.currentTime);
+        osc.frequency.setValueAtTime(440, ctx.currentTime + 0.2);
+        gain.gain.setValueAtTime(0.2, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.4);
+      } catch(e) {}
+    }
+
+    // Storyboard Scene Definitions
+    const scenes = [
+      {
+        start: 0,
+        end: 5,
+        tag: "EMERGENCY REALITY",
+        title: 'NO CELL TOWER.<br><span class="highlight-red">NO SATELLITE.</span>',
+        subtitle: "When disaster strikes in remote wilderness, conventional networks collapse to zero.",
+        img: "images/app_screen_home.jpg",
+        camClass: "cam-center",
+        sceneLabel: "01 • THE HOOK",
+        hudSignal: "0 BARS (OFF-GRID)",
+        alertMode: false,
+        onEnter: () => playBassBraam()
+      },
+      {
+        start: 5,
+        end: 10,
+        tag: "AUTONOMOUS P2P MESH",
+        title: 'MEET TRAILLINK.<br><span class="highlight-green">THE LIVING MESH.</span>',
+        subtitle: "Unprivileged multi-hop mesh network established on unmodified Android smartphones.",
+        img: "images/app_screen_home.jpg",
+        camClass: "cam-left-hero",
+        sceneLabel: "02 • HERO REVEAL",
+        hudSignal: "MESH CONNECTED (P2P)",
+        alertMode: false,
+        onEnter: () => playTechChime()
+      },
+      {
+        start: 10,
+        end: 15,
+        tag: "SPATIAL CARTOGRAPHY",
+        title: 'OFFLINE VECTOR MAPS.<br><span class="highlight-green">ZERO DATA NEEDED.</span>',
+        subtitle: "Navigate uncharted gorges with embedded MBTiles vector maps and real-time teammate GPS.",
+        img: "images/app_screen_map.jpg",
+        camClass: "cam-tilt-down",
+        sceneLabel: "03 • OFFLINE MAPS",
+        hudSignal: "GPS FIX: ±17m",
+        alertMode: false,
+        onEnter: () => playTechChime()
+      },
+      {
+        start: 15,
+        end: 20,
+        tag: "DUAL-PIPELINE AUDIO",
+        title: 'PUSH-TO-TALK.<br><span class="highlight-green">LIVE MESH RADIO.</span>',
+        subtitle: "Live PCM voice streaming over dynamic Wi-Fi Direct sockets plus store-and-forward notes.",
+        img: "images/app_screen_chat_ptt.jpg",
+        camClass: "cam-right-hero",
+        sceneLabel: "04 • PTT RADIO",
+        hudSignal: "RADIO CH: FREE (54 Mbps)",
+        alertMode: false,
+        onEnter: () => playRadioSquelch()
+      },
+      {
+        start: 20,
+        end: 25,
+        tag: "LIFE-SAVING PROTOCOL",
+        title: 'ONE-TOUCH SOS.<br><span class="highlight-red">PRIORITY ROUTING.</span>',
+        subtitle: "Emergency beacons override mesh traffic with high-priority queues and peer compass navigation.",
+        img: "images/app_screen_sos.jpg",
+        camClass: "cam-sos-panic",
+        sceneLabel: "05 • EMERGENCY SOS",
+        hudSignal: "BROADCASTING SOS BEACON",
+        alertMode: true,
+        onEnter: () => playSosAlert()
+      },
+      {
+        start: 25,
+        end: 30,
+        tag: "THE MESH REVOLUTION",
+        title: 'NEVER WALK ALONE.<br><span class="highlight-green">TRAILLINK.</span>',
+        subtitle: "Infrastructure-Independent Mobile Mesh Platform. SLIIT CDAP Research 2026.",
+        img: "images/app_screen_compass.jpg",
+        camClass: "cam-zoom-in",
+        sceneLabel: "06 • FINALE & CTA",
+        hudSignal: "REVOLUTION READY",
+        alertMode: false,
+        onEnter: () => playTechChime()
+      }
+    ];
+
+    let currentSceneIndex = -1;
+
+    function renderFrame(time) {
+      const progressPercent = (time / TOTAL_DURATION) * 100;
+      document.getElementById('timelineProgress').style.width = progressPercent + '%';
+
+      // Format timecode
+      const mins = Math.floor(time / 60);
+      const secs = Math.floor(time % 60);
+      const ms = Math.floor((time % 1) * 100);
+      const formatted = `00:${String(secs).padStart(2, '0')}:${String(ms).padStart(2, '0')}`;
+      document.getElementById('currentTime').textContent = `00:${String(secs).padStart(2, '0')}`;
+      document.getElementById('hudTime').textContent = formatted;
+
+      // Determine active scene
+      const sceneIndex = scenes.findIndex(s => time >= s.start && time < s.end);
+      if (sceneIndex !== -1 && sceneIndex !== currentSceneIndex) {
+        currentSceneIndex = sceneIndex;
+        const scene = scenes[sceneIndex];
+
+        // Update kinetic typography
+        document.getElementById('kineticTag').textContent = scene.tag;
+        document.getElementById('kineticTitle').innerHTML = scene.title;
+        document.getElementById('kineticSubtitle').textContent = scene.subtitle;
+        document.getElementById('hudScene').textContent = scene.sceneLabel;
+        document.getElementById('hudSignal').textContent = scene.hudSignal;
+
+        // Update Phone image & 3D camera
+        const phone = document.getElementById('phoneHardware');
+        const img = document.getElementById('phoneScreenImg');
+        img.src = scene.img;
+
+        phone.className = 'phone-hardware ' + scene.camClass;
+
+        // Background mood
+        const bg = document.getElementById('cinematicBg');
+        if (scene.alertMode) {
+          bg.classList.add('alert-mode');
+        } else {
+          bg.classList.remove('alert-mode');
+        }
+
+        // Active pill button
+        document.querySelectorAll('.scene-pill').forEach((pill, idx) => {
+          pill.classList.toggle('active', idx === sceneIndex);
+        });
+
+        // Trigger SFX
+        if (scene.onEnter) scene.onEnter();
+      }
+    }
+
+    function togglePlay() {
+      if (isPlaying) {
+        pauseCommercial();
+      } else {
+        playCommercial();
+      }
+    }
+
+    function playCommercial() {
+      isPlaying = true;
+      document.getElementById('playBtn').innerHTML = '&#10074;&#10074;';
+      const fps = 30;
+      const step = 1 / fps;
+
+      if (currentTime >= TOTAL_DURATION) {
+        currentTime = 0;
+      }
+
+      animationInterval = setInterval(() => {
+        currentTime += step;
+        if (currentTime >= TOTAL_DURATION) {
+          currentTime = TOTAL_DURATION;
+          renderFrame(currentTime);
+          pauseCommercial();
+          return;
+        }
+        renderFrame(currentTime);
+      }, 1000 / fps);
+    }
+
+    function pauseCommercial() {
+      isPlaying = false;
+      document.getElementById('playBtn').innerHTML = '&#9658;';
+      if (animationInterval) clearInterval(animationInterval);
+    }
+
+    function jumpTo(seconds) {
+      currentTime = seconds;
+      renderFrame(currentTime);
+      if (!isPlaying) {
+        playCommercial();
+      }
+    }
+
+    // Timeline Scrub
+    document.getElementById('timelineBar').addEventListener('click', (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickPos = (e.clientX - rect.left) / rect.width;
+      jumpTo(clickPos * TOTAL_DURATION);
+    });
+
+    document.getElementById('playBtn').addEventListener('click', togglePlay);
+
+    // Audio Toggle
+    document.getElementById('toggleAudioBtn').addEventListener('click', () => {
+      audioEnabled = !audioEnabled;
+      const btn = document.getElementById('toggleAudioBtn');
+      if (audioEnabled) {
+        btn.innerHTML = '<span>&#128266;</span> Cinematic Audio: ON';
+        btn.style.color = '#34d399';
+        getAudioContext();
+      } else {
+        btn.innerHTML = '<span>&#128263;</span> Audio: MUTED';
+        btn.style.color = '#94a3b8';
+      }
+    });
+
+    // Recording Tips Modal
+    document.getElementById('recordTipsBtn').addEventListener('click', () => {
+      alert("PRO TIP: How to Record this into an MP4 Video File:\n\n1. On Mac: Press Cmd + Shift + 5 to open QuickTime Screen Recorder.\n2. Select the 16:9 video player area on this screen.\n3. Click Record.\n4. Click 'Play' on the commercial player!\n5. You now have a studio-grade 30-second commercial video with all real app screenshots and 60fps animations ready for Instagram, YouTube, and Viva presentation!");
+    });
+
+    // Keyboard Space to Play/Pause
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      }
+    });
+
+    // Initial render
+    renderFrame(0);
+  </script>
+</body>
+</html>
