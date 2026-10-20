@@ -69,6 +69,9 @@
           <a href="docs/R26-IT-135_Research_Paper.pdf" target="_blank" class="quick-pill-btn">
             &#128196; Research Paper (PDF) &nearr;
           </a>
+          <a href="#individualProposalFolder" class="quick-pill-btn" onclick="openAndScrollToProposalFolder(event)" style="border-color: #10b981; color: #059669; font-weight: 700;">
+            &#128194; Individual Proposals (4) &darr;
+          </a>
           <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQC15Bek_uIVSIOEgPkZGYOIATdTR-P4vl9fgC8nMhyUMdo?e=iXcJzA" target="_blank" rel="noopener noreferrer" class="quick-pill-btn">
             &#128202; Proposal (.pptx) &nearr;
           </a>
@@ -193,6 +196,140 @@
             <a href="https://mysliit.sharepoint.com/:p:/s/CDAPSubmissionCloud/IQC15Bek_uIVSIOEgPkZGYOIATdTR-P4vl9fgC8nMhyUMdo?e=iXcJzA" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
               &#128640; Open Proposal Slides (.pptx) &nearr;
             </a>
+          </div>
+        </article>
+
+        <!-- Individual project proposal Reports Card Folder -->
+        <article class="doc-card folder-card" id="individualProposalFolder" onclick="toggleProposalFolder(event)">
+          <div class="folder-card-top">
+            <div class="folder-icon-wrap">
+              &#128194;
+            </div>
+            <span class="folder-badge-pill">
+              <span class="pulse-dot"></span> 4 Member Reports &bull; PDF
+            </span>
+          </div>
+
+          <h3 class="folder-card-title">Individual project proposal Reports</h3>
+
+          <div class="folder-card-meta">
+            <strong>Milestone:</strong> Project Proposal Defense &bull; March 2026<br>
+            <strong>Allocation:</strong> 10% Final Assessment &bull; 4 Members
+          </div>
+
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.85rem;">
+            Official individual research proposal reports defining component architecture, methodology, algorithms, and validation strategy for all 4 team members.
+          </p>
+
+          <div class="folder-member-previews">
+            <span class="member-chip">Thanujana D O (IT22148704)</span>
+            <span class="member-chip">Pabodhana D M D I (IT22168290)</span>
+            <span class="member-chip">Dulsara H G N (IT22544490)</span>
+            <span class="member-chip">Vitharana G.G (IT22894038)</span>
+          </div>
+
+          <div class="folder-toggle-bar">
+            <span id="folderToggleLabel">&#128194; Click to Open Folder (4 Documents)</span>
+            <span class="toggle-arrow">&#9662;</span>
+          </div>
+
+          <!-- Inside that card, when clicked, show all 4 documents -->
+          <div class="folder-tray" id="folderTray" onclick="event.stopPropagation()">
+            <div class="folder-tray-header">
+              <div>
+                <h4>&#128194; Individual project proposal Reports</h4>
+                <p class="folder-tray-sub">Official academic proposal specifications for each research subsystem (4 Members)</p>
+              </div>
+              <button type="button" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.35rem 0.85rem;" onclick="closeProposalFolder(event)">
+                &#9652; Collapse Folder
+              </button>
+            </div>
+
+            <div class="folder-members-grid">
+              <!-- 1st document: Thanujana D O -->
+              <div class="member-report-card">
+                <div class="member-card-badge-row">
+                  <span class="member-order-badge">1st Document</span>
+                  <span class="member-id-pill">IT22148704</span>
+                </div>
+                <div class="member-name">Thanujana D O</div>
+                <div class="member-topic">Short-Range Direct BLE Communication Layer</div>
+                <div class="member-desc">
+                  BLE GATT 1-to-1 &amp; group messaging, 128-bit AES-CBC encryption with dynamic nonces, delivery confirmation status flow, and local Room cache.
+                </div>
+                <div class="member-card-actions">
+                  <a href="docs/IT22148704_Project_Proposal.pdf" target="_blank" class="btn-report-view">
+                    &#128065; Read Proposal (PDF) &nearr;
+                  </a>
+                  <a href="docs/IT22148704_Project_Proposal.pdf" download="IT22148704_Project _Proposal.pdf" class="btn-report-download">
+                    &#11015; Download PDF (1.3 MB)
+                  </a>
+                </div>
+              </div>
+
+              <!-- 2nd document: Pabodhana D M D I -->
+              <div class="member-report-card">
+                <div class="member-card-badge-row">
+                  <span class="member-order-badge">2nd Document</span>
+                  <span class="member-id-pill">IT22168290</span>
+                </div>
+                <div class="member-name">Pabodhana D M D I</div>
+                <div class="member-topic">Decentralized Multi-Hop Routing &amp; Delivery Assurance</div>
+                <div class="member-desc">
+                  Reactive AODV-BLE multi-hop protocol, hop-path-based ACK back-propagation, AES-256-GCM application-layer encryption, and UUID loop prevention.
+                </div>
+                <div class="member-card-actions">
+                  <a href="docs/IT22168290_Project_Proposal.pdf" target="_blank" class="btn-report-view">
+                    &#128065; Read Proposal (PDF) &nearr;
+                  </a>
+                  <a href="docs/IT22168290_Project_Proposal.pdf" download="IT22168290_Project_Proposal.pdf" class="btn-report-download">
+                    &#11015; Download PDF (1.4 MB)
+                  </a>
+                </div>
+              </div>
+
+              <!-- 3rd document: Dulsara H G N -->
+              <div class="member-report-card">
+                <div class="member-card-badge-row">
+                  <span class="member-order-badge">3rd Document</span>
+                  <span class="member-id-pill">IT22544490</span>
+                </div>
+                <div class="member-name">Dulsara H G N</div>
+                <div class="member-topic">Context-Aware Communication Manager (CACM)</div>
+                <div class="member-desc">
+                  Central intelligence rule-based decision engine (5 priority rules), RSSI proximity estimation, emergency flood prioritization, and battery-aware relay selection.
+                </div>
+                <div class="member-card-actions">
+                  <a href="docs/IT22544490_Project_Proposal.pdf" target="_blank" class="btn-report-view">
+                    &#128065; Read Proposal (PDF) &nearr;
+                  </a>
+                  <a href="docs/IT22544490_Project_Proposal.pdf" download="IT22544490_Project Proposal.pdf" class="btn-report-download">
+                    &#11015; Download PDF (2.3 MB)
+                  </a>
+                </div>
+              </div>
+
+              <!-- 4th document: Vitharana G.G -->
+              <div class="member-report-card">
+                <div class="member-card-badge-row">
+                  <span class="member-order-badge">4th Document</span>
+                  <span class="member-id-pill">IT22894038</span>
+                </div>
+                <div class="member-name">Vitharana G.G</div>
+                <div class="member-topic">Message Persistence &amp; Opportunistic Delivery Trigger</div>
+                <div class="member-desc">
+                  Delay-Tolerant Network (DTN) store-carry-forward, crash-safe SQLite WAL persistence, 3-tier TTL lifecycle (24h/6h/2h), and 3s/12s BLE duty cycle scanner.
+                </div>
+                <div class="member-card-actions">
+                  <a href="docs/IT22894038_Project_Proposal.pdf" target="_blank" class="btn-report-view">
+                    &#128065; Read Proposal (PDF) &nearr;
+                  </a>
+                  <a href="docs/IT22894038_Project_Proposal.pdf" download="IT22894038_Project_Proposal.pdf" class="btn-report-download">
+                    &#11015; Download PDF (1.6 MB)
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </article>
 

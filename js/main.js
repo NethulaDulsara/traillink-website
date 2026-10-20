@@ -536,3 +536,48 @@ function initEmailTemplateCopy() {
     });
   });
 }
+
+/* -----------------------------------------------------------------------------
+ * 11. Individual Project Proposal Reports - Interactive Folder Card Logic
+ * -------------------------------------------------------------------------- */
+function toggleProposalFolder(e) {
+  // If clicked on an action link/button inside the tray, allow default link action without collapsing
+  if (e && (e.target.closest('a') || (e.target.closest('button') && !e.target.closest('.folder-toggle-bar')))) {
+    return;
+  }
+  
+  const folder = document.getElementById('individualProposalFolder');
+  const label = document.getElementById('folderToggleLabel');
+  if (!folder) return;
+
+  const isOpen = folder.classList.toggle('is-open');
+  if (label) {
+    label.innerHTML = isOpen ? '&#128194; Close Folder' : '&#128194; Click to Open Folder (4 Documents)';
+  }
+}
+
+function closeProposalFolder(e) {
+  if (e) e.stopPropagation();
+  const folder = document.getElementById('individualProposalFolder');
+  const label = document.getElementById('folderToggleLabel');
+  if (folder) {
+    folder.classList.remove('is-open');
+    if (label) {
+      label.innerHTML = '&#128194; Click to Open Folder (4 Documents)';
+    }
+  }
+}
+
+function openAndScrollToProposalFolder(e) {
+  if (e) e.preventDefault();
+  const folder = document.getElementById('individualProposalFolder');
+  const label = document.getElementById('folderToggleLabel');
+  if (folder) {
+    folder.classList.add('is-open');
+    if (label) {
+      label.innerHTML = '&#128194; Close Folder';
+    }
+    folder.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
